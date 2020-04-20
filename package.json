@@ -1,0 +1,44 @@
+{
+  "name": "swift-security",
+  "version": "1.0.0",
+  "description": "security & logistics",
+  "scripts": {
+    "start": "gatsby develop",
+    "dev": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovieokeh/swift-security.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ovieokeh/swift-security/issues"
+  },
+  "homepage": "https://github.com/ovieokeh/swift-security#readme",
+  "dependencies": {
+    "gatsby": "^2.20.25",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^5.0.15",
+    "gatsby-image": "^2.3.4",
+    "gatsby-plugin-offline": "^3.1.4",
+    "gatsby-plugin-react-helmet": "^3.2.4",
+    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-plugin-typescript": "^2.3.3",
+    "gatsby-remark-images": "^3.2.4",
+    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-transformer-remark": "^2.7.3",
+    "gatsby-transformer-sharp": "^2.4.6"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
