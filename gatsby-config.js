@@ -30,6 +30,9 @@ module.exports = {
       },
     },
 
+    // Enable SASS support
+    `gatsby-plugin-sass`,
+
     // Add content to <head> element
     `gatsby-plugin-react-helmet`,
 
