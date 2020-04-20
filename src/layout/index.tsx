@@ -1,5 +1,8 @@
 import * as React from 'react'
+
 import SEO from './SEO'
+import Navbar from '../components/navbar'
+import './global.scss'
 
 type LayoutProps = {
   title: string
@@ -8,6 +11,9 @@ type LayoutProps = {
 export default (props: LayoutProps) => (
   <>
     <SEO title={props.title} />
-    {props.children}
+
+    <Navbar />
+
+    <div className="main">{props.children}</div>
   </>
 )
