@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  padding: 0 20px;
+  padding: 10px 40px;
   left: 0;
   right: 0;
   top: 40px;
@@ -64,21 +64,22 @@
   align-items: center;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 500;
   color: var(--white);
 }
 
 .trackInput {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
   background-color: transparent;
   color: var(--white);
   border: 1px solid var(--white);
-  padding: 5px 10px;
+  padding: 10px;
 
   &::placeholder {
     color: var(--white);
-    font-size: 0.8em;
+    // font-size: 0.8em;
   }
 }
 
@@ -146,6 +147,14 @@
   .navMenuItem:hover .arrowDown {
     transform: rotate(-180deg);
     transition: transform ease-out 250ms;
+  }
+
+  .navMenuLink {
+    font-size: 0.8em;
+  }
+
+  .trackInput {
+    padding: 5px 10px;
   }
 
   .secondaryMenu {
