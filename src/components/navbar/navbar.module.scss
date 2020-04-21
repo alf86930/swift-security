@@ -5,10 +5,11 @@
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  padding: 0 40px;
+  padding: 0 20px;
   background-color: var(--blue-darkest);
   color: var(--white);
   position: relative;
+  z-index: 999;
 }
 
 .navMenu {
@@ -79,7 +80,6 @@
 
   &::placeholder {
     color: var(--white);
-    // font-size: 0.8em;
   }
 }
 

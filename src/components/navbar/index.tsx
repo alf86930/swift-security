@@ -6,9 +6,9 @@ import Hamburger from '../hamburger'
 import SecondaryMenu from './SecondaryMenu'
 
 // icons
-import LogoIcon from '../../assets/LogoIcon'
-import ArrowDown from '../../assets/ArrowDownIcon'
-import SearchIcon from '../../assets/SearchIcon'
+import LogoIcon from '../../assets/icons/LogoIcon'
+import ArrowDown from '../../assets/icons/ArrowDownIcon'
+import SearchIcon from '../../assets/icons/SearchIcon'
 
 // style
 import styles from './navbar.module.scss'
