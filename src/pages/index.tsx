@@ -6,6 +6,7 @@ import HomeVaultOneImg from '../assets/images/home-vault-one.jpg'
 import Hero from '../components/hero'
 
 import styles from './_styles/index.module.scss'
+import ServicesCTA from '../components/services-cta'
 
 const heroOneContent = (
   <>
@@ -21,6 +22,7 @@ const heroOneContent = (
 const IndexPage = () => (
   <Layout title="Home">
     <Hero bg={HomeVaultOneImg} content={heroOneContent} />
+    <ServicesCTA />
   </Layout>
 )
 
