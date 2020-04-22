@@ -1,21 +1,26 @@
 import * as React from 'react'
+import Img from 'gatsby-image'
 import styles from './hero.module.scss'
 
 type HeroProps = {
-  bg: any
   content: React.ReactNode
+  bg?: any
+  bgAlt?: string
+  size?: 'small' | 'medium' | 'large'
 }
 
-const Hero: React.FC<HeroProps> = ({ bg, content }) => {
-  return (
-    <div className={styles.hero}>
-      <img
-        className={styles.heroBg}
-        src={bg}
-        alt="Man standing in front of vault"
-      />
+const heroSizes = {
+  large: styles.hero,
+  medium: styles.heroMedium,
+  small: styles.heroSmall,
+}
 
-      <div className={styles.heroContent}>{content}</div>
+const Hero: React.FC<HeroProps> = ({ bg, content, bgAlt, size = 'large' }) => {
+  return (
+    <div className={heroSizes[size]}>
+      {bg && <Img className={styles.heroBg} fluid={bg.fluid} alt={bgAlt} />}
+
+      {content}
     </div>
   )
 }

@@ -1,35 +1,27 @@
 .container {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  padding: 40px 0;
-}
-
-.serviceBox {
-  display: inline-flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-
-  border-radius: 5px;
-
-  background-color: var(--blue-darkest);
-  color: var(--blue-lightest);
-  fill: var(--blue-lightest);
-
-  svg {
-    width: 70px;
-    height: auto;
-  }
+  padding: 20px;
+  background-color: var(--white);
 }
 
-.serviceLabel {
-  font-size: 0.8em;
-  font-weight: 300;
-  text-align: center;
-  margin: 8px 0 0 0;
+.box {
+  min-height: 150px;
+  margin: 10px 0;
+}
+
+.h2 {
+  font-size: 1.3em;
+  color: var(--blue-darkest);
+}
+
+.p {
+  line-height: 1.4;
+}
+
+.link {
+  font-size: 0.9em;
+  text-decoration: none;
+  color: var(--blue-darkest);
+  border-bottom: 1px solid var(--blue-darkest);
 }

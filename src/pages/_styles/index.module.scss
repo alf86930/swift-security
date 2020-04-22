@@ -1,12 +1,75 @@
+.heroContainer {
+  // for reference: https://www.smashingmagazine.com/2013/08/absolute-horizontal-vertical-centering-css/
+  max-width: 400px;
+  padding: 40px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.heroTwoContainer,
+.heroThreeContainer,
+.heroFourContainer {
+  text-align: left;
+}
+
+.heroFourContainer {
+  display: block;
+  background-color: var(--white);
+  color: var(--blue-darkest);
+
+  p {
+    font-weight: 400 !important;
+  }
+}
+
 .heroH2 {
   font-size: 1.2em;
   font-weight: 600;
-  text-align: center;
   text-transform: uppercase;
 }
 
-.heroP {
+.heroDescription {
   font-weight: 300;
-  text-align: center;
   line-height: 1.5;
+
+  &Medium {
+    composes: heroDescription;
+    font-weight: 400;
+  }
+}
+
+.heroLink {
+  display: block;
+  font-size: 0.9em;
+  text-decoration: none;
+  background-color: var(--blue-lightest);
+  color: var(--blue-darkest);
+  border-bottom: 2px solid var(--blue-normal);
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 3px;
+
+  &Alt {
+    composes: heroLink;
+    background-color: var(--blue-darkest);
+    color: var(--blue-lightest);
+  }
+}
+
+.heroTruckImage {
+  width: auto;
+  height: 100px;
+  float: left;
+  padding-right: 10px;
 }

@@ -1,27 +1,41 @@
 import * as React from 'react'
-
-import TruckIcon from '../../assets/icons/TruckIcon'
-import VaultIcon from '../../assets/icons/VaultIcon'
-import ServiceIcon from '../../assets/icons/ServiceIcon'
-
 import styles from './services-cta.module.scss'
+import { Link } from 'gatsby'
 
-const services = [
-  { label: 'Track a package', icon: <TruckIcon /> },
-  { label: 'Secure vault', icon: <VaultIcon /> },
-  { label: 'Contact us', icon: <ServiceIcon /> },
-]
+const ServiceCTA = () => {
+  return (
+    <section className={styles.container}>
+      <div className={styles.box}>
+        <h2 className={styles.h2}>Security &amp; Solutions Expertise</h2>
 
-const ServicesCTA = () => {
-  const renderServices = () =>
-    services.map(service => (
-      <div className={styles.serviceBox}>
-        {service.icon}
-        <p className={styles.serviceLabel}>{service.label}</p>
+        <p className={styles.p}>
+          A comprehensive suite of services drawing on our global scale and
+          expertise to deliver security solutions across your entire supply
+          chain.
+        </p>
+
+        <Link className={styles.link} to="/security">
+          Learn more
+        </Link>
       </div>
-    ))
 
-  return <div className={styles.container}>{renderServices()}</div>
+      <div className={styles.box}>
+        <h2 className={styles.h2}>
+          Parcels, Documents, &amp; International Mail Shipments
+        </h2>
+
+        <p className={styles.p}>
+          Pick up and delivery services for parcels, documents an lightweight
+          goods. Large volume international postal services for business
+          customers.
+        </p>
+
+        <Link className={styles.link} to="/logistics">
+          Learn more
+        </Link>
+      </div>
+    </section>
+  )
 }
 
-export default ServicesCTA
+export default ServiceCTA
