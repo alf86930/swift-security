@@ -15,7 +15,7 @@ const ServiceCTA = () => {
         </p>
 
         <Link className={styles.link} to="/security">
-          Learn more
+          View our security packages
         </Link>
       </div>
 
@@ -31,7 +31,7 @@ const ServiceCTA = () => {
         </p>
 
         <Link className={styles.link} to="/logistics">
-          Learn more
+          View our freight services
         </Link>
       </div>
     </section>
