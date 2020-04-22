@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 // components
 import Layout from '../layout'
@@ -36,6 +36,19 @@ const heroTwoContent = (
   </div>
 )
 
+const heroThreeContent = (
+  <div className={styles.heroThreeContainer}>
+    <p className={styles.heroDescription}>
+      Your one-stop solution for your international air freight and shipping
+      needs to ship and track packages by air to anywhere across the globe.
+    </p>
+
+    <Link className={styles.heroLink} to="/air-freight">
+      Learn more
+    </Link>
+  </div>
+)
+
 type IndexPageProps = {
   data: any
 }
@@ -62,10 +75,17 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
         bg={images['home-ship-one']}
         content={heroTwoContent}
         imageAlt="Ship on blue water"
-        size="small"
+        size="medium"
       />
 
       <ServicesCTA />
+
+      <Hero
+        bg={images['home-plane-one']}
+        content={heroThreeContent}
+        imageAlt="Plane on tarmac"
+        size="small"
+      />
     </Layout>
   )
 }

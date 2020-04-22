@@ -11,6 +11,7 @@ type HeroProps = {
 
 const heroSizes = {
   large: styles.hero,
+  medium: styles.heroMedium,
   small: styles.heroSmall,
 }
 

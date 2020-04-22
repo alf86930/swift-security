@@ -5,9 +5,14 @@
   overflow: hidden;
   position: relative;
 
+  &Medium {
+    composes: hero;
+    min-height: 50vh;
+  }
+
   &Small {
     composes: hero;
-    min-height: 40vh;
+    min-height: 30vh;
   }
 }
 

@@ -1,5 +1,6 @@
 .heroOneContainer,
-.heroTwoContainer {
+.heroTwoContainer,
+.heroThreeContainer {
   // for reference: https://www.smashingmagazine.com/2013/08/absolute-horizontal-vertical-centering-css/
   width: 100%;
   height: 100%;
@@ -22,7 +23,8 @@
   color: var(--white);
 }
 
-.heroTwoContainer {
+.heroTwoContainer,
+.heroThreeContainer {
   text-align: left;
 }
 
@@ -35,4 +37,15 @@
 .heroDescription {
   font-weight: 300;
   line-height: 1.5;
+}
+
+.heroLink {
+  font-size: 0.9em;
+  text-decoration: none;
+  background-color: var(--blue-lightest);
+  color: var(--blue-darkest);
+  border-bottom: 2px solid var(--blue-normal);
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 3px;
 }
