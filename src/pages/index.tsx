@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 // components
 import Layout from '../layout'
 import Hero from '../components/hero'
+import ServicesIcons from '../components/services-icons'
 import ServicesCTA from '../components/services-cta'
 import VaultInfo from '../components/vault-info'
 
@@ -12,11 +13,25 @@ import styles from './_styles/index.module.scss'
 
 const heroOneContent = (
   <div className={styles.heroOneContainer}>
-    <h2 className={styles.heroOneH2}>Secure Vault Deposit &amp; Logistics</h2>
+    <h2 className={styles.heroH2}>Secure Vault Deposit &amp; Logistics</h2>
 
-    <p className={styles.heroOneDescription}>
+    <p className={styles.heroDescription}>
       Experience complete peace of mind and confidentiality with unparalleled
       state of the art security.
+    </p>
+  </div>
+)
+
+const heroTwoContent = (
+  <div className={styles.heroTwoContainer}>
+    <h2 className={styles.heroH2}>Shipping Services</h2>
+
+    <p className={styles.heroDescription}>
+      Our Freight Services has demonstrated incomparable excellence to companies
+      and individuals with special requirements.
+      <br /> <br />
+      We are committed to providing efficient shipping and handling, pickup and
+      on-time delivery; all together with world-class security.
     </p>
   </div>
 )
@@ -40,8 +55,17 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
         imageAlt="Man standing in front of vault"
       />
 
-      <ServicesCTA />
+      <ServicesIcons />
       <VaultInfo />
+
+      <Hero
+        bg={images['home-ship-one']}
+        content={heroTwoContent}
+        imageAlt="Ship on blue water"
+        size="small"
+      />
+
+      <ServicesCTA />
     </Layout>
   )
 }

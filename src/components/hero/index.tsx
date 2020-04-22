@@ -6,11 +6,22 @@ type HeroProps = {
   bg: any
   content: React.ReactNode
   imageAlt: string
+  size?: string
 }
 
-const Hero: React.FC<HeroProps> = ({ bg, content, imageAlt }) => {
+const heroSizes = {
+  large: styles.hero,
+  small: styles.heroSmall,
+}
+
+const Hero: React.FC<HeroProps> = ({
+  bg,
+  content,
+  imageAlt,
+  size = 'large',
+}) => {
   return (
-    <div className={styles.hero}>
+    <div className={heroSizes[size]}>
       <Img className={styles.heroBg} fluid={bg.fluid} alt={imageAlt} />
 
       {content}

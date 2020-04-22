@@ -4,6 +4,11 @@
   background-color: var(--blue-lightest);
   overflow: hidden;
   position: relative;
+
+  &Small {
+    composes: hero;
+    min-height: 40vh;
+  }
 }
 
 .heroBg {
