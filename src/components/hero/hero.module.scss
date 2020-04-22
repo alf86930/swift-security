@@ -1,21 +1,30 @@
 .hero {
+  display: flex;
   width: 100%;
-  min-height: 65vh;
-  background-color: var(--blue-lightest);
-  overflow: hidden;
+  min-height: 50vh;
+  padding: 20px;
   position: relative;
+  overflow: hidden;
+  background-color: var(--white);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
 
-  &Medium {
-    composes: hero;
-    min-height: 45vh;
+  &HomeVaultOne {
+    min-height: 70vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url('../../assets/images/hero-images/home-vault-one.webp');
   }
-
-  &Small {
-    composes: hero;
-    min-height: 30vh;
+  &HomePlaneOne {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url('../../assets/images/hero-images/home-plane-one.webp');
   }
-}
-
-.heroBg {
-  min-height: inherit;
+  &HomeShipOne {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url('../../assets/images/hero-images/home-ship-one.webp');
+  }
+  &HomeWomanOne {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url('../../assets/images/hero-images/home-woman-one.webp');
+  }
 }

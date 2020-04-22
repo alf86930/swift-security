@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 
 // components
 import Layout from '../layout'
@@ -10,7 +10,7 @@ import VaultInfo from '../components/vault-info'
 import PartnersBanner from '../components/partners-banner'
 
 // images
-import TruckImage from '../assets/images/truck.jpg'
+import TruckImage from '../assets/images/truck.webp'
 
 // styles
 import styles from './_styles/index.module.scss'
@@ -96,64 +96,27 @@ type IndexPageProps = {
 }
 
 const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
-  const images = data.allImageSharp.nodes.reduce((acc, cur) => {
-    const imageName = cur.fluid.originalName.split('.')[0]
-    acc[imageName] = cur
-    return acc
-  }, {})
-
   return (
     <Layout title="Home">
-      <Hero
-        bg={images['home-vault-one']}
-        bgAlt="Man standing in front of vault"
-        content={heroOneContent}
-      />
+      <Hero id="home-vault-one" content={heroOneContent} />
 
       <ServicesIcons />
+
       <VaultInfo />
 
-      <Hero
-        bg={images['home-ship-one']}
-        bgAlt="Ship on blue water"
-        size="medium"
-        content={heroTwoContent}
-      />
+      <Hero id="home-ship-one" content={heroTwoContent} />
 
       <ServicesCTA />
 
-      <Hero
-        bg={images['home-plane-one']}
-        bgAlt="Plane on tarmac"
-        size="small"
-        content={heroThreeContent}
-      />
+      <Hero id="home-plane-one" content={heroThreeContent} />
 
-      <Hero content={heroFourContent} size="large" />
+      <Hero content={heroFourContent} />
 
-      <Hero
-        bg={images['home-woman-one']}
-        bgAlt="Smiling engineer"
-        size="medium"
-        content={heroFiveContent}
-      />
+      <Hero id="home-woman-one" content={heroFiveContent} />
 
       <PartnersBanner />
     </Layout>
   )
 }
-
-export const imagesQuery = graphql`
-  query HomeImages {
-    allImageSharp(filter: { fluid: { originalName: { regex: "/home/" } } }) {
-      nodes {
-        fluid {
-          originalName
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

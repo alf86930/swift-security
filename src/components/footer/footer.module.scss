@@ -1,20 +1,24 @@
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 10px;
   background-color: var(--blue-darkest);
   color: var(--blue-lightest);
-  font-size: 0.5rem;
-  font-weight: 300;
+  text-align: center;
 }
 
 .linksContainer {
-  display: inline-flex;
-  align-items: center;
+  padding-top: 20px;
+  border-bottom: 1px solid var(--blue-lightest);
 }
 
 .link {
+  display: block;
   color: var(--blue-lightest);
   text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  background-color: var(--black);
+  font-size: 0.8em;
+  margin: 0;
+  padding: 20px;
 }
