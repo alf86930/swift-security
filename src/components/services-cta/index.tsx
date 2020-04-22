@@ -14,8 +14,8 @@ const services = [
 
 const ServicesCTA = () => {
   const renderServices = () =>
-    services.map(service => (
-      <div className={styles.serviceBox}>
+    services.map((service, i) => (
+      <div key={i} className={styles.serviceBox}>
         {service.icon}
         <p className={styles.serviceLabel}>{service.label}</p>
       </div>

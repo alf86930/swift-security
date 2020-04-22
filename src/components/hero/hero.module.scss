@@ -1,27 +1,11 @@
 .hero {
-  display: flex;
-  align-items: center;
   width: 100%;
-  height: 70vh;
+  min-height: 70vh;
   background-color: var(--blue-lightest);
   overflow: hidden;
   position: relative;
 }
 
 .heroBg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  object-fit: cover;
-}
-
-.heroContent {
-  color: var(--blue-lightest);
-  padding: 20px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  z-index: 3;
+  min-height: inherit;
 }
