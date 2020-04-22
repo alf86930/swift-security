@@ -2,6 +2,8 @@ import * as React from 'react'
 
 import SEO from './SEO'
 import Navbar from '../components/navbar'
+import Footer from '../components/footer'
+
 import './global.scss'
 
 type LayoutProps = {
@@ -15,5 +17,7 @@ export default (props: LayoutProps) => (
     <Navbar />
 
     <div className="main">{props.children}</div>
+
+    <Footer />
   </>
 )
