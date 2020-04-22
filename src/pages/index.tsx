@@ -7,6 +7,7 @@ import Hero from '../components/hero'
 import ServicesIcons from '../components/services-icons'
 import ServicesCTA from '../components/services-cta'
 import VaultInfo from '../components/vault-info'
+import PartnersBanner from '../components/partners-banner'
 
 // images
 import TruckImage from '../assets/images/truck.jpg'
@@ -15,7 +16,7 @@ import TruckImage from '../assets/images/truck.jpg'
 import styles from './_styles/index.module.scss'
 
 const heroOneContent = (
-  <div className={styles.heroOneContainer}>
+  <div className={styles.heroContainer}>
     <h2 className={styles.heroH2}>Secure Vault Deposit &amp; Logistics</h2>
 
     <p className={styles.heroDescription}>
@@ -26,7 +27,7 @@ const heroOneContent = (
 )
 
 const heroTwoContent = (
-  <div className={styles.heroTwoContainer}>
+  <div className={`${styles.heroContainer} ${styles.heroTwoContainer}`}>
     <h2 className={styles.heroH2}>Shipping Services</h2>
 
     <p className={styles.heroDescription}>
@@ -40,7 +41,7 @@ const heroTwoContent = (
 )
 
 const heroThreeContent = (
-  <div className={styles.heroThreeContainer}>
+  <div className={`${styles.heroContainer} ${styles.heroThreeContainer}`}>
     <p className={styles.heroDescription}>
       Your one-stop solution for your international air freight and shipping
       needs to ship and track packages by air to anywhere across the globe.
@@ -53,7 +54,7 @@ const heroThreeContent = (
 )
 
 const heroFourContent = (
-  <div className={styles.heroFourContainer}>
+  <div className={`${styles.heroContainer} ${styles.heroFourContainer}`}>
     <div>
       <img
         className={styles.heroTruckImage}
@@ -68,13 +69,25 @@ const heroFourContent = (
       <br /> <br />
       In order to guarantee our customers a high quality and cost effective
       service, we have a network consisting of several offices situated in every
-      major city across US including Shanghai, Guangzhou, Qingdao, Hong Kong,
-      Ningbo and Tianjin.
+      major city across US including Shanghai, Guangzhou, and Qingdao.
     </p>
 
     <Link className={styles.heroLinkAlt} to="/road-freight">
       Ship something by road
     </Link>
+  </div>
+)
+
+const heroFiveContent = (
+  <div className={`${styles.heroContainer} ${styles.heroFiveContainer}`}>
+    <p className={styles.heroDescriptionMedium}>
+      Swift Security &amp; Logistics coordinates people in over 17 countries and
+      territories worldwide.
+      <br /> <br />
+      Driven by the power of more than 7,000 employees, we deliver integrated
+      services and tailored solutions for managing and transporting goods and
+      information.
+    </p>
   </div>
 )
 
@@ -117,6 +130,15 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       />
 
       <Hero content={heroFourContent} size="large" />
+
+      <Hero
+        bg={images['home-woman-one']}
+        bgAlt="Smiling engineer"
+        size="medium"
+        content={heroFiveContent}
+      />
+
+      <PartnersBanner />
     </Layout>
   )
 }

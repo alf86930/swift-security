@@ -1,13 +1,13 @@
 .hero {
   width: 100%;
-  min-height: 70vh;
+  min-height: 65vh;
   background-color: var(--blue-lightest);
   overflow: hidden;
   position: relative;
 
   &Medium {
     composes: hero;
-    min-height: 50vh;
+    min-height: 45vh;
   }
 
   &Small {

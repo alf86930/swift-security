@@ -1,7 +1,4 @@
-.heroOneContainer,
-.heroTwoContainer,
-.heroThreeContainer,
-.heroFourContainer {
+.heroContainer {
   // for reference: https://www.smashingmagazine.com/2013/08/absolute-horizontal-vertical-centering-css/
   max-width: 400px;
   padding: 40px 20px;
@@ -45,6 +42,11 @@
 .heroDescription {
   font-weight: 300;
   line-height: 1.5;
+
+  &Medium {
+    composes: heroDescription;
+    font-weight: 400;
+  }
 }
 
 .heroLink {
