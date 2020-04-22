@@ -8,6 +8,9 @@ import ServicesIcons from '../components/services-icons'
 import ServicesCTA from '../components/services-cta'
 import VaultInfo from '../components/vault-info'
 
+// images
+import TruckImage from '../assets/images/truck.jpg'
+
 // styles
 import styles from './_styles/index.module.scss'
 
@@ -44,7 +47,33 @@ const heroThreeContent = (
     </p>
 
     <Link className={styles.heroLink} to="/air-freight">
-      Learn more
+      Get a quote
+    </Link>
+  </div>
+)
+
+const heroFourContent = (
+  <div className={styles.heroFourContainer}>
+    <div>
+      <img
+        className={styles.heroTruckImage}
+        src={TruckImage}
+        alt="A red truck"
+      />
+    </div>
+
+    <p className={styles.heroDescription}>
+      We're a quality Road Freight Services logistics provider that abides to
+      your precise shipping needs with reliable.
+      <br /> <br />
+      In order to guarantee our customers a high quality and cost effective
+      service, we have a network consisting of several offices situated in every
+      major city across US including Shanghai, Guangzhou, Qingdao, Hong Kong,
+      Ningbo and Tianjin.
+    </p>
+
+    <Link className={styles.heroLinkAlt} to="/road-freight">
+      Ship something by road
     </Link>
   </div>
 )
@@ -64,8 +93,8 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
     <Layout title="Home">
       <Hero
         bg={images['home-vault-one']}
+        bgAlt="Man standing in front of vault"
         content={heroOneContent}
-        imageAlt="Man standing in front of vault"
       />
 
       <ServicesIcons />
@@ -73,19 +102,21 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
       <Hero
         bg={images['home-ship-one']}
-        content={heroTwoContent}
-        imageAlt="Ship on blue water"
+        bgAlt="Ship on blue water"
         size="medium"
+        content={heroTwoContent}
       />
 
       <ServicesCTA />
 
       <Hero
         bg={images['home-plane-one']}
-        content={heroThreeContent}
-        imageAlt="Plane on tarmac"
+        bgAlt="Plane on tarmac"
         size="small"
+        content={heroThreeContent}
       />
+
+      <Hero content={heroFourContent} size="large" />
     </Layout>
   )
 }

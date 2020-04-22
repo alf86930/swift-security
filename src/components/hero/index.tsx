@@ -3,10 +3,10 @@ import Img from 'gatsby-image'
 import styles from './hero.module.scss'
 
 type HeroProps = {
-  bg: any
   content: React.ReactNode
-  imageAlt: string
-  size?: string
+  bg?: any
+  bgAlt?: string
+  size?: 'small' | 'medium' | 'large'
 }
 
 const heroSizes = {
@@ -15,15 +15,10 @@ const heroSizes = {
   small: styles.heroSmall,
 }
 
-const Hero: React.FC<HeroProps> = ({
-  bg,
-  content,
-  imageAlt,
-  size = 'large',
-}) => {
+const Hero: React.FC<HeroProps> = ({ bg, content, bgAlt, size = 'large' }) => {
   return (
     <div className={heroSizes[size]}>
-      <Img className={styles.heroBg} fluid={bg.fluid} alt={imageAlt} />
+      {bg && <Img className={styles.heroBg} fluid={bg.fluid} alt={bgAlt} />}
 
       {content}
     </div>

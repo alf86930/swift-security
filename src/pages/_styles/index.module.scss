@@ -1,10 +1,8 @@
 .heroOneContainer,
 .heroTwoContainer,
-.heroThreeContainer {
+.heroThreeContainer,
+.heroFourContainer {
   // for reference: https://www.smashingmagazine.com/2013/08/absolute-horizontal-vertical-centering-css/
-  width: 100%;
-  height: 100%;
-  min-width: 200px;
   max-width: 400px;
   padding: 40px 20px;
 
@@ -12,7 +10,6 @@
   flex-direction: column;
   justify-content: center;
 
-  overflow: auto;
   margin: auto;
   position: absolute;
   top: 0;
@@ -24,8 +21,19 @@
 }
 
 .heroTwoContainer,
-.heroThreeContainer {
+.heroThreeContainer,
+.heroFourContainer {
   text-align: left;
+}
+
+.heroFourContainer {
+  display: block;
+  background-color: var(--white);
+  color: var(--blue-darkest);
+
+  p {
+    font-weight: 400 !important;
+  }
 }
 
 .heroH2 {
@@ -40,6 +48,7 @@
 }
 
 .heroLink {
+  display: block;
   font-size: 0.9em;
   text-decoration: none;
   background-color: var(--blue-lightest);
@@ -48,4 +57,17 @@
   width: fit-content;
   padding: 10px 20px;
   border-radius: 3px;
+
+  &Alt {
+    composes: heroLink;
+    background-color: var(--blue-darkest);
+    color: var(--blue-lightest);
+  }
+}
+
+.heroTruckImage {
+  width: auto;
+  height: 100px;
+  float: left;
+  padding-right: 10px;
 }
