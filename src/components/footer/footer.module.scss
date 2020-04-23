@@ -6,18 +6,19 @@
 
 .linksContainer {
   padding-top: 20px;
-  border-bottom: 1px solid var(--blue-lightest);
 }
 
 .link {
   display: block;
+  font-size: 0.9em;
+  font-weight: 300;
   color: var(--blue-lightest);
   text-decoration: none;
   margin-bottom: 20px;
 }
 
 .copyright {
-  background-color: var(--black);
+  background-color: #031935;
   font-size: 0.8em;
   margin: 0;
   padding: 20px;

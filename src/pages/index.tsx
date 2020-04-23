@@ -23,6 +23,14 @@ const heroOneContent = (
       Experience complete peace of mind and confidentiality with unparalleled
       state of the art security.
     </p>
+
+    <Link
+      className={styles.heroLink}
+      to="/track"
+      style={{ margin: '20px auto' }}
+    >
+      Track a package
+    </Link>
   </div>
 )
 
