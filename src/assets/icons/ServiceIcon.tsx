@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const ServiceIcon = (props: any) => (
+const ServiceIcon = props => (
   <svg viewBox="0 0 512 512" width={512} height={512} {...props}>
     <circle cx={216} cy={184} r={8} />
     <circle cx={136} cy={184} r={8} />

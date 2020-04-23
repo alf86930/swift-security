@@ -1,28 +1,22 @@
 import * as React from 'react'
-import Img from 'gatsby-image'
 import styles from './hero.module.scss'
 
 type HeroProps = {
   content: React.ReactNode
-  bg?: any
-  bgAlt?: string
-  size?: 'small' | 'medium' | 'large'
+  id?: string
 }
 
-const heroSizes = {
-  large: styles.hero,
-  medium: styles.heroMedium,
-  small: styles.heroSmall,
+const idMapping = {
+  'home-vault-one': styles.heroHomeVaultOne,
+  'home-ship-one': styles.heroHomeShipOne,
+  'home-plane-one': styles.heroHomePlaneOne,
+  'home-woman-one': styles.heroHomeWomanOne,
 }
 
-const Hero: React.FC<HeroProps> = ({ bg, content, bgAlt, size = 'large' }) => {
-  return (
-    <div className={heroSizes[size]}>
-      {bg && <Img className={styles.heroBg} fluid={bg.fluid} alt={bgAlt} />}
+const Hero: React.FC<HeroProps> = ({ id, content }) => {
+  const backgroundImage = idMapping[id] || ''
 
-      {content}
-    </div>
-  )
+  return <div className={`${styles.hero} ${backgroundImage}`}>{content}</div>
 }
 
 export default Hero

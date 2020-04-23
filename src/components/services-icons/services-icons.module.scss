@@ -10,8 +10,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 30vw;
+  height: auto;
   padding: 10px;
 
   border-radius: 5px;
@@ -21,7 +21,7 @@
   fill: var(--blue-lightest);
 
   svg {
-    width: 70px;
+    width: 10vw;
     height: auto;
   }
 }

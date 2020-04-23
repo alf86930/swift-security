@@ -10,7 +10,12 @@ const Hamburger: React.FC<HamburgerProps> = ({ isPressed, onClick }) => {
   const barClassName = `${styles.bar} ${isPressed && styles.barActive}`.trim()
 
   return (
-    <button className={styles.hamburger} onClick={onClick}>
+    <button
+      type="button"
+      aria-label="menu button"
+      className={styles.hamburger}
+      onClick={onClick}
+    >
       <span className={barClassName} />
       <span className={barClassName} />
       <span className={barClassName} />

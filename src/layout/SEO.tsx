@@ -2,6 +2,8 @@ import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import favicon from '../assets/images/favicon.png'
+
 type SEOProps = {
   title: string
   description?: string
@@ -49,7 +51,7 @@ const SEO: React.FC<SEOProps> = ({ title, description = '' }) => {
         },
       ]}
     >
-      <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
+      <link rel="shortcut icon" type="image/x-icon" href={favicon} />
     </Helmet>
   )
 }

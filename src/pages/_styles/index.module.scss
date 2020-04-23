@@ -1,18 +1,7 @@
 .heroContainer {
-  // for reference: https://www.smashingmagazine.com/2013/08/absolute-horizontal-vertical-centering-css/
-  max-width: 400px;
-  padding: 40px 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   text-align: center;
   color: var(--white);
 }
@@ -45,7 +34,6 @@
 
   &Medium {
     composes: heroDescription;
-    font-weight: 400;
   }
 }
 
@@ -70,6 +58,6 @@
 .heroTruckImage {
   width: auto;
   height: 100px;
-  float: left;
-  padding-right: 10px;
+  float: right;
+  transform: rotateY(180deg);
 }

@@ -6,6 +6,7 @@
   justify-content: space-between;
   height: 60px;
   padding: 0 20px;
+  font-weight: 500;
   background-color: var(--blue-darkest);
   color: var(--white);
   position: relative;
@@ -17,12 +18,12 @@
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  padding: 10px 40px;
+  padding: 20px;
   left: 0;
   right: 0;
   top: 40px;
   height: 100vh;
-  background-color: var(--blue-darkest);
+  background-color: var(--white);
   visibility: hidden;
   opacity: 0;
   transition: visibility ease-in 150ms, opacity ease-in 150ms;
@@ -66,20 +67,19 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1em;
-  font-weight: 500;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 .trackInput {
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   background-color: transparent;
-  color: var(--white);
-  border: 1px solid var(--white);
+  color: var(--text-color);
+  border: 1px solid var(--blue-darkest);
   padding: 10px;
 
   &::placeholder {
-    color: var(--white);
+    color: var(--blue-darkest);
   }
 }
 
@@ -93,7 +93,7 @@
   line-height: 1.4;
   font-size: 0.9em;
   padding: 10px 0;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 // ################### ICONS ##################
@@ -104,7 +104,7 @@
   width: 15px;
   height: 100%;
   margin-left: 10px;
-  fill: #fff;
+  fill: var(--blue-darkest);
   transform: rotate(90deg);
 }
 

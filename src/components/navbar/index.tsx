@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.nav}>
-      <Link to="/" className={styles.logo}>
+      <Link aria-label="Go home" to="/" className={styles.logo}>
         <LogoIcon />
       </Link>
 
