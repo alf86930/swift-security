@@ -21,7 +21,11 @@ const ServicesIcon = () => {
       </div>
     ))
 
-  return <div className={styles.container}>{renderServices()}</div>
+  return (
+    <div className={styles.container}>
+      <div className={styles.content}>{renderServices()}</div>
+    </div>
+  )
 }
 
 export default ServicesIcon

@@ -9,6 +9,7 @@
   --white: #ffffff;
   --red: #c52d2d;
   --box-shadow: 0 2px 7px rgba(17, 17, 17, 0.175);
+  --site-pd: 60px;
 }
 
 html,
@@ -33,5 +34,5 @@ body {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  background-color: var(--blue-lightest);
+  background-color: var(--white);
 }

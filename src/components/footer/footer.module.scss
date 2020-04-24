@@ -5,6 +5,8 @@
 }
 
 .linksContainer {
+  display: flex;
+  justify-content: space-around;
   padding-top: 20px;
 }
 
@@ -22,4 +24,30 @@
   font-size: 0.8em;
   margin: 0;
   padding: 20px;
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--site-pd);
+  }
+
+  .linksContainer {
+    justify-content: space-between;
+  }
+
+  .link {
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: var(--blue-lightest);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .copyright {
+    background-color: transparent;
+  }
 }

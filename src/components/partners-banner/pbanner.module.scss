@@ -13,5 +13,13 @@
 }
 
 .p {
+  font-weight: 500;
   margin: 5px 0;
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .logo {
+    width: 60px;
+  }
 }

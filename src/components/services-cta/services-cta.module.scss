@@ -25,3 +25,17 @@
   color: var(--blue-darkest);
   border-bottom: 1px solid var(--blue-darkest);
 }
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px var(--site-pd);
+  }
+
+  .box {
+    margin: 40px 10px;
+    max-width: 35vw;
+  }
+}
