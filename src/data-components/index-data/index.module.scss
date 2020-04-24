@@ -1,15 +1,17 @@
-.heroContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  color: var(--white);
-}
-
 .heroTwoContainer,
-.heroThreeContainer,
 .heroFourContainer {
   text-align: left;
+}
+
+.heroThreeContainer {
+  p {
+    max-width: 85%;
+    margin: auto;
+  }
+  a {
+    margin: 20px auto;
+    // display: initial !important;
+  }
 }
 
 .heroFourContainer {
@@ -60,4 +62,17 @@
   height: 100px;
   float: right;
   transform: rotateY(180deg);
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .heroContainer {
+    background-color: var(--blue-darkest);
+  }
+
+  .heroOneContainer {
+    max-width: 70%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }

@@ -2,7 +2,6 @@
   display: flex;
   width: 100%;
   min-height: 50vh;
-  padding: 20px;
   position: relative;
   overflow: hidden;
   background-color: var(--white);
@@ -13,6 +12,7 @@
     min-height: 70vh;
     background-color: rgba(0, 0, 0, 0.7);
     background-image: url('../../assets/images/hero-images/home-vault-one.webp');
+    background-position-x: 60%;
   }
   &HomePlaneOne {
     background-color: rgba(0, 0, 0, 0.7);
@@ -21,9 +21,61 @@
   &HomeShipOne {
     background-color: rgba(0, 0, 0, 0.7);
     background-image: url('../../assets/images/hero-images/home-ship-one.webp');
+    background-position-x: center;
   }
   &HomeWomanOne {
     background-color: rgba(0, 0, 0, 0.7);
     background-image: url('../../assets/images/hero-images/home-woman-one.webp');
+    background-position-x: 60%;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 20px;
+}
+
+.desktopContent {
+  display: none;
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .hero {
+    align-items: center;
+    padding-left: 0;
+    background-blend-mode: normal;
+
+    &HomeVaultOne {
+      min-height: 95vh;
+    }
+    &HomeShipOne {
+      min-height: 80vh;
+      background-image: url('../../assets/images/hero-images/home-ship-two.webp');
+      background-position-y: 45%;
+    }
+    &HomePlaneOne {
+      flex-direction: row-reverse;
+      min-height: 80vh;
+    }
+    &HomeTruckOne {
+      min-height: auto;
+    }
+    &HomeWomanOne {
+      min-height: 70vh;
+      background-position-y: 50%;
+    }
+  }
+
+  .content {
+    display: none;
+  }
+
+  .desktopContent {
+    display: block;
   }
 }

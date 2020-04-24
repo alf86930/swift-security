@@ -1,0 +1,65 @@
+.heroContainer {
+  color: var(--white);
+  line-height: 1.5;
+  padding: var(--site-pd);
+}
+
+.heroOneContainer {
+  background-color: var(--blue-darkest);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.heroTwoContainer {
+  max-width: 50vw;
+}
+
+.heroThreeContainer {
+  background-color: var(--blue-darkest);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  max-width: 50vw;
+}
+
+.heroFourContainer {
+  padding: 80px;
+  padding-right: 0;
+}
+
+.heroFiveContainer {
+  padding-left: var(--site-pd);
+}
+
+.heroH2 {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.p {
+  max-width: 45vw;
+  font-weight: 500;
+}
+
+.heroLink {
+  display: block;
+  text-decoration: none;
+  color: var(--blue-darkest);
+  background-color: var(--blue-lightest);
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-top: 20px;
+  width: fit-content;
+
+  &Alt {
+    composes: heroLink;
+    background-color: var(--blue-darkest);
+    color: var(--blue-lightest);
+  }
+}
+
+.heroTruckImage {
+  width: 45vw;
+  height: auto;
+  float: right;
+}

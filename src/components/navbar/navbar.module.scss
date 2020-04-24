@@ -96,8 +96,6 @@
   color: var(--text-color);
 }
 
-// ################### ICONS ##################
-
 .searchIcon {
   position: absolute;
   right: 5%;
@@ -113,10 +111,11 @@
   transition: transform ease-in 150ms;
 }
 
-// ==================== ICONS ====================
-
 // ######################### Desktop styles #############################
 @media (min-width: 768px) {
+  .nav {
+    padding: 0 var(--site-pd);
+  }
   .navMenu {
     display: inline-flex;
     flex-direction: row;
@@ -150,19 +149,33 @@
   }
 
   .navMenuLink {
+    color: var(--white);
     font-size: 0.8em;
+  }
+
+  .trackInput {
+    color: var(--white);
+    border-color: var(--blue-white);
+
+    &::placeholder {
+      color: var(--blue-lightest);
+    }
   }
 
   .trackInput {
     padding: 5px 10px;
   }
 
+  .searchIcon {
+    fill: var(--white);
+  }
+
   .secondaryMenu {
     position: absolute;
     left: -25%;
     right: 25%;
-    top: 60px;
-    width: 150px;
+    top: 45px;
+    width: 180px;
     min-height: 120px;
     padding: 0 10px;
     border-radius: 3px;
