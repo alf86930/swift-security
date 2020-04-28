@@ -1,5 +1,5 @@
 .container {
-  padding: 20px;
+  padding: var(--site-pd);
   min-height: 120px;
 }
 
@@ -14,6 +14,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   width: 25vw;
   height: 25vw;
   padding: 10px;
@@ -38,7 +39,6 @@
 // ######################### Desktop styles #############################
 @media (min-width: 768px) {
   .container {
-    padding: 20px;
     background-color: var(--blue-lightest);
   }
 

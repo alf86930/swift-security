@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: var(--site-pd);
   background-color: var(--white);
 }
 
@@ -31,7 +31,7 @@
   .container {
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px var(--site-pd);
+    padding: 20px var(--site-pdLarge);
   }
 
   .box {

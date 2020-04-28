@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 
 import TruckIcon from '../../assets/icons/TruckIcon'
 import VaultIcon from '../../assets/icons/VaultIcon'
@@ -7,18 +8,18 @@ import ServiceIcon from '../../assets/icons/ServiceIcon'
 import styles from './services-icons.module.scss'
 
 const services = [
-  { label: 'Track a package', icon: <TruckIcon /> },
-  { label: 'Secure vault', icon: <VaultIcon /> },
-  { label: 'Contact us', icon: <ServiceIcon /> },
+  { label: 'Track a package', href: '/track', icon: <TruckIcon /> },
+  { label: 'Secure vault', href: '/vault', icon: <VaultIcon /> },
+  { label: 'Contact us', href: '/contact-us', icon: <ServiceIcon /> },
 ]
 
 const ServicesIcon = () => {
   const renderServices = () =>
     services.map((service, i) => (
-      <div key={i} className={styles.serviceIcon}>
+      <Link key={i} className={styles.serviceIcon} to={service.href}>
         {service.icon}
         <p className={styles.serviceLabel}>{service.label}</p>
-      </div>
+      </Link>
     ))
 
   return (
