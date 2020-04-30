@@ -1,0 +1,43 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 35vh;
+  padding: var(--site-pd);
+  background-color: var(--blue-lightest);
+  text-align: center;
+}
+
+.introText {
+  margin: 0;
+}
+
+.label {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.input {
+  display: block;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: var(--blue-normal);
+  border: 2px solid var(--blue-normal);
+
+  &::placeholder {
+    color: inherit;
+    text-transform: initial;
+  }
+}
+
+.submit {
+  font-size: 1em;
+  padding: 10px 20px;
+  background-color: var(--blue-darkest);
+  color: var(--blue-lightest);
+  border-style: none;
+}
