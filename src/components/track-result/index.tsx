@@ -3,6 +3,7 @@ import * as React from 'react'
 // components
 import Loader from '../loader'
 import TrackingEmpty from '../tracking-empty'
+import Map from '../map'
 
 // images
 import mapImg from '../../assets/images/paris-map.png'
@@ -34,6 +35,7 @@ const TrackResult: React.FC<TrackResultProps> = ({ result, isLoading }) => {
           historyItem={historyItem}
           index={i}
           totalCount={result.history.length - 1}
+          key={i}
         />
       ))}
     </>
@@ -45,12 +47,8 @@ const TrackResult: React.FC<TrackResultProps> = ({ result, isLoading }) => {
 
   return (
     <section className={styles.container}>
-      <div className={styles.imgContainer}>
-        <img
-          className={styles.trackImg}
-          src={mapImg}
-          alt="Current package location"
-        />
+      <div className={styles.mapContainer}>
+        <Map location={result.item.currentLocation} />
       </div>
 
       <div className={styles.historyContainer}>{renderPackageHistory()}</div>

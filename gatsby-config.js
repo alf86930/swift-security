@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env`,
+})
+
 /* eslint-disable quotes */
 module.exports = {
   siteMetadata: {

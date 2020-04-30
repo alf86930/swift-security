@@ -4,6 +4,11 @@ export interface Result {
     sendDate: Date
     eta: Date
     code: string
+    currentLocation: {
+      lat: number
+      lng: number
+      text: string
+    }
   }
   history: {
     location: string

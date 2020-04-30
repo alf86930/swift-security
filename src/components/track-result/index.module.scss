@@ -3,33 +3,10 @@
   padding-left: var(--site-pd);
 }
 
-.imgContainer {
+.mapContainer {
   background-color: var(--blue-lightest);
-  position: relative;
+  width: 100%;
   height: 400px;
-  width: 100%;
-  overflow: auto;
-}
-
-.trackImg {
-  width: 150%;
-  height: 150%;
-  object-fit: cover;
-  pointer-events: none;
-  touch-action: none;
-  vertical-align: bottom;
-  position: relative;
-}
-
-.boxShadow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
 .container {

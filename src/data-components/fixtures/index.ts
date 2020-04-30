@@ -4,6 +4,11 @@ const fakeResultOne = {
     sendDate: new Date(),
     eta: new Date(),
     code: 'ASDFGHKL',
+    currentLocation: {
+      lat: 48.864716,
+      lng: 2.349014,
+      text: 'Paris, France',
+    },
   },
   history: [
     {
