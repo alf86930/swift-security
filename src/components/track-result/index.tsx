@@ -5,7 +5,7 @@ import Loader from '../loader'
 import TrackingEmpty from '../tracking-empty'
 
 // images
-import mapImg from '../../assets/images/map.webp'
+import mapImg from '../../assets/images/paris-map.png'
 
 // interfaces
 import { Result } from './interfaces'
@@ -16,14 +16,15 @@ import PackageHistory from '../package-history'
 import PackageContent from '../package-content'
 
 export interface TrackResultProps {
-  result: Result | null
+  result: Result | null | 'not found'
   isLoading: boolean
 }
 
 const TrackResult: React.FC<TrackResultProps> = ({ result, isLoading }) => {
   if (isLoading) return <Loader />
 
-  if (!result) return <TrackingEmpty />
+  if (result === null || result === 'not found')
+    return <TrackingEmpty type={result} />
 
   const renderPackageHistory = () => (
     <>
@@ -50,7 +51,6 @@ const TrackResult: React.FC<TrackResultProps> = ({ result, isLoading }) => {
           src={mapImg}
           alt="Current package location"
         />
-        <div className={styles.boxShadow} />
       </div>
 
       <div className={styles.historyContainer}>{renderPackageHistory()}</div>

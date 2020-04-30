@@ -5,7 +5,6 @@
 }
 
 .p {
-  font-weight: 500;
   color: var(--blue-darkest);
   padding: 0 var(--site-pd);
 }
@@ -13,10 +12,11 @@
 .price {
   composes: p;
 
+  font-weight: 500;
   width: 100%;
   margin-top: 50px;
   margin-bottom: 0;
-  background-color: #d1e1f0;
+  background-color: var(--green);
   padding: 20px;
-  color: var(--text-color);
+  color: var(--white);
 }

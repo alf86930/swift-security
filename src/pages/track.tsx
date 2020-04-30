@@ -19,7 +19,13 @@ const Track = () => {
     setIsLoading(true)
 
     setTimeout(() => {
-      const result = results[code] || null
+      const result = results[code]
+
+      if (!result) {
+        setItem('not found')
+        setIsLoading(false)
+        return
+      }
 
       setItem(result)
       setIsLoading(false)
