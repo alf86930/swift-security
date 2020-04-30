@@ -1,0 +1,21 @@
+import * as React from 'react'
+
+import styles from './index.module.scss'
+
+interface TimelineProps {
+  index: number
+  length: number
+}
+
+const Timeline: React.FC<TimelineProps> = ({ index, length }) => {
+  const timelineClassname =
+    index === 0
+      ? styles.timelineFirst
+      : index === length
+      ? styles.timelineLast
+      : styles.timeline
+
+  return <span className={timelineClassname} />
+}
+
+export default Timeline

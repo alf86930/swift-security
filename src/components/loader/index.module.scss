@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--site-pd);
+  min-height: 55vh;
+
+  svg {
+    width: 120px;
+    height: 120px;
+
+    path {
+      stroke: var(--blue-normal);
+    }
+  }
+
+  &Info {
+    color: var(--blue-normal);
+    font-weight: 300;
+  }
+}

@@ -2,7 +2,7 @@ const fakeResultOne = {
   item: {
     price: 5000000.0,
     sendDate: new Date(),
-    estimatedETA: new Date(),
+    eta: new Date(),
     code: 'ASDFGHKL',
   },
   history: [

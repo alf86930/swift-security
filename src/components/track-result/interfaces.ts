@@ -2,7 +2,7 @@ export interface Result {
   item: {
     price: number
     sendDate: Date
-    estimatedETA: Date
+    eta: Date
     code: string
   }
   history: {

@@ -3,115 +3,37 @@
   padding-left: var(--site-pd);
 }
 
+.imgContainer {
+  position: relative;
+}
+
+.trackImg {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  pointer-events: none;
+  touch-action: none;
+  position: relative;
+}
+
+.boxShadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 0px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 55vh;
-
-  &Empty {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: var(--site-pd);
-    min-height: 55vh;
-
-    &Icon {
-      width: 120px;
-      height: 120px;
-
-      path {
-        stroke: var(--blue-normal);
-      }
-    }
-
-    &Info {
-      color: var(--blue-normal);
-      font-weight: 300;
-    }
-  }
 }
 
 .historyContainer {
   width: 100%;
-}
-
-.history {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: var(--height);
-  padding: var(--site-pd);
-  margin-left: var(--site-pd);
-  color: var(--blue-darkest);
-  position: relative;
-
-  --height: 125px;
-
-  &Comment {
-    margin: 5px 0;
-    font-weight: 500;
-  }
-
-  &Location {
-    margin: 5px 0;
-  }
-
-  &Date {
-    margin: 5px 0;
-    font-size: 0.8em;
-    opacity: 0.7;
-  }
-}
-
-.timeline {
-  display: block;
-  width: 3px;
-  height: 100%;
-  background-color: #aadaff;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-
-  &:before {
-    content: '';
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    background-color: var(--blue-light);
-    position: absolute;
-    bottom: 50px;
-    left: -3.5px;
-  }
-
-  &First,
-  &Last {
-    composes: timeline;
-    height: calc(var(--height) / 2);
-  }
-
-  &First {
-    top: calc(var(--height) / 2);
-
-    &:before {
-      width: 12px;
-      height: 12px;
-      left: -7.2px;
-      background-color: var(--blue-darkest);
-      border: 3px solid var(--blue-light);
-      border-radius: 12px;
-    }
-  }
-
-  &Last {
-    transform: rotate(180deg);
-
-    &:before {
-      top: 0;
-    }
-  }
 }

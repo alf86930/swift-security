@@ -1,0 +1,32 @@
+.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: var(--height);
+  padding: var(--site-pd);
+  margin-left: var(--site-pd);
+  color: var(--blue-darkest);
+  opacity: 0.6;
+  position: relative;
+
+  --height: 125px;
+
+  &:first-of-type {
+    opacity: 1;
+  }
+
+  &Comment {
+    margin: 5px 0;
+    font-weight: 500;
+  }
+
+  &Location {
+    margin: 5px 0;
+  }
+
+  &Date {
+    margin: 5px 0;
+    font-size: 0.8em;
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,49 @@
+.timeline {
+  display: block;
+  width: 2px;
+  height: 100%;
+  background-color: #aadaff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--blue-light);
+    position: absolute;
+    bottom: 50px;
+    left: -4px;
+  }
+
+  &First,
+  &Last {
+    composes: timeline;
+    height: calc(var(--height) / 2);
+  }
+
+  &First {
+    top: calc(var(--height) / 2);
+
+    &:before {
+      width: 12px;
+      height: 12px;
+      left: -7.2px;
+      background-color: var(--blue-darkest);
+      border: 3px solid var(--blue-light);
+      border-radius: 12px;
+    }
+  }
+
+  &Last {
+    transform: rotate(180deg);
+
+    &:before {
+      top: 0;
+    }
+  }
+}
