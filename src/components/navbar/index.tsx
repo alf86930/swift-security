@@ -41,7 +41,7 @@ const Navbar = () => {
         }`.trim()}
       >
         <li className={styles.navMenuItem}>
-          <Link className={styles.navMenuLink} to="/">
+          <Link className={styles.navMenuLink} to="/about">
             About us
           </Link>
         </li>

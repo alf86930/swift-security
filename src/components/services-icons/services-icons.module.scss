@@ -1,6 +1,7 @@
 .container {
   padding: var(--site-pd);
   min-height: 120px;
+  background-color: var(--blue-lightest);
 }
 
 .content {
@@ -15,8 +16,8 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  width: 25vw;
-  height: 25vw;
+  width: 15vw;
+  height: 15vw;
   padding: 10px;
   border-radius: 5px;
   background-color: var(--blue-darkest);

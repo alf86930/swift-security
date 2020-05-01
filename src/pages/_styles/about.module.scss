@@ -1,0 +1,48 @@
+.title {
+  width: 100%;
+  background-color: var(--blue-lightest);
+  margin: 0;
+  padding: var(--site-pd) 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.container {
+  padding: var(--site-pd);
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  background-color: var(--blue-darkest);
+  color: var(--white);
+  margin: 10px 0;
+  padding: 10px 20px;
+  max-width: fit-content;
+  border-radius: 5px;
+}
+
+.introImg {
+  display: none;
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .container {
+    padding: var(--site-pd) var(--site-pdLarge);
+  }
+
+  .introImg {
+    display: block;
+    height: 200px;
+    width: auto;
+    float: right;
+    margin-left: 20px;
+  }
+}
