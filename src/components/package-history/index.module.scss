@@ -6,13 +6,20 @@
   padding: var(--site-pd);
   margin-left: var(--site-pd);
   color: var(--blue-darkest);
-  opacity: 0.6;
   position: relative;
 
   --height: 125px;
 
+  &Comment,
+  &Location,
+  &Date {
+    opacity: 0.6;
+  }
+
   &:first-of-type {
-    opacity: 1;
+    p {
+      opacity: 1 !important;
+    }
   }
 
   &Comment {

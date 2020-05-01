@@ -6,7 +6,7 @@ import TrackingEmpty from '../tracking-empty'
 import Map from '../map'
 
 // images
-import mapImg from '../../assets/images/paris-map.png'
+// import mapImg from '../../assets/images/paris-map.png'
 
 // interfaces
 import { Result } from './interfaces'
