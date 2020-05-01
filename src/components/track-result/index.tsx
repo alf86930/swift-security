@@ -27,33 +27,18 @@ const TrackResult: React.FC<TrackResultProps> = ({ result, isLoading }) => {
   if (result === null || result === 'not found')
     return <TrackingEmpty type={result} />
 
-  const renderPackageHistory = () => (
-    <>
-      <h2 className={styles.h2}>History</h2>
-      {result.history.map((historyItem, i) => (
-        <PackageHistory
-          historyItem={historyItem}
-          index={i}
-          totalCount={result.history.length - 1}
-          key={i}
-        />
-      ))}
-    </>
-  )
-
-  const renderPackageContent = () => (
-    <PackageContent item={{ ...result.item, name: result.sender.name }} />
-  )
-
   return (
-    <section className={styles.container}>
+    <>
       <div className={styles.mapContainer}>
         <Map location={result.item.currentLocation} />
       </div>
 
-      <div className={styles.historyContainer}>{renderPackageHistory()}</div>
-      {renderPackageContent()}
-    </section>
+      <section className={styles.container}>
+        <PackageHistory item={result} />
+
+        <PackageContent item={{ ...result.item, name: result.sender.name }} />
+      </section>
+    </>
   )
 }
 

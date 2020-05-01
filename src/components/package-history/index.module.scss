@@ -1,3 +1,12 @@
+.h2 {
+  color: var(--blue-darkest);
+  padding-left: var(--site-pd);
+}
+
+.container {
+  width: 100%;
+}
+
 .history {
   display: flex;
   flex-direction: column;
@@ -35,5 +44,16 @@
     margin: 5px 0;
     font-size: 0.8em;
     opacity: 0.7;
+  }
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .h2 {
+    padding-left: 0;
+  }
+
+  .history {
+    margin-left: 0;
   }
 }
