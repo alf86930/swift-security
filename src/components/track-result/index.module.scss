@@ -19,3 +19,21 @@
 .historyContainer {
   width: 100%;
 }
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .h2 {
+    padding-left: 0;
+  }
+  .mapContainer {
+    height: 80vh;
+  }
+
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: var(--site-pd) var(--site-pdLarge);
+    max-width: 90vw;
+    margin: auto;
+  }
+}

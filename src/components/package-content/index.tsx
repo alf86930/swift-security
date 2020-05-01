@@ -13,6 +13,8 @@ const PackageContent = ({ item }) => {
 
   return (
     <div className={styles.container}>
+      <h2 className={styles.h2}>Package details</h2>
+
       <p className={styles.p}>Sent by: {item.name}</p>
       <p className={styles.p}>Sent on: {itemSendDate}</p>
       <p className={styles.p}>Estimated arrival date: {itemETA}</p>

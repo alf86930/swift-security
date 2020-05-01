@@ -1,11 +1,9 @@
-// global styles
-
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  padding: 0 var(--site-pd);
+  padding-right: 0 var(--site-pd);
   font-weight: 500;
   background-color: var(--blue-darkest);
   color: var(--white);
@@ -194,4 +192,8 @@
   .secondaryMenuLink {
     color: var(--blue-darkest);
   }
+}
+
+.logo {
+  padding: 0 var(--site-pd);
 }

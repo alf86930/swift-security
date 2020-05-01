@@ -4,6 +4,10 @@
   background-color: var(--blue-lightest);
 }
 
+.h2 {
+  display: none;
+}
+
 .p {
   color: var(--blue-darkest);
   padding: 0 var(--site-pd);
@@ -19,4 +23,28 @@
   background-color: var(--green);
   padding: 20px;
   color: var(--white);
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .container {
+    padding-top: 0;
+    text-align: right;
+    background-color: transparent;
+  }
+
+  .h2 {
+    display: block;
+    color: var(--blue-darkest);
+    margin-bottom: calc(var(--site-pd) * 2);
+  }
+
+  .p {
+    padding-right: 0;
+  }
+
+  .price {
+    color: var(--blue-darkest);
+    background-color: transparent;
+  }
 }

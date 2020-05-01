@@ -1,16 +1,23 @@
+.container {
+  padding: var(--site-pd);
+  background-color: var(--blue-lightest);
+}
+
 .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 35vh;
-  padding: var(--site-pd);
-  background-color: var(--blue-lightest);
   text-align: center;
 }
 
 .introText {
   margin: 0;
+}
+
+.infoImage {
+  display: none;
 }
 
 .label {
@@ -40,4 +47,30 @@
   background-color: var(--blue-darkest);
   color: var(--blue-lightest);
   border-style: none;
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    padding: var(--site-pdLarge);
+  }
+
+  .info {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .introText {
+    max-width: 55vw;
+  }
+
+  .infoImage {
+    display: block;
+    width: auto;
+    height: 350px;
+  }
 }

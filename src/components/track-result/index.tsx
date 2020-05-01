@@ -46,14 +46,15 @@ const TrackResult: React.FC<TrackResultProps> = ({ result, isLoading }) => {
   )
 
   return (
-    <section className={styles.container}>
+    <>
       <div className={styles.mapContainer}>
         <Map location={result.item.currentLocation} />
       </div>
-
-      <div className={styles.historyContainer}>{renderPackageHistory()}</div>
-      {renderPackageContent()}
-    </section>
+      <section className={styles.container}>
+        <div className={styles.historyContainer}>{renderPackageHistory()}</div>
+        {renderPackageContent()}
+      </section>
+    </>
   )
 }
 
