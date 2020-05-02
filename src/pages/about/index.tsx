@@ -1,15 +1,15 @@
 import * as React from 'react'
 
 // components
-import Layout from '../layout'
-import ServicesIcon from '../components/services-icons'
-import PartnersBanner from '../components/partners-banner'
+import Layout from '../../layout'
+import ServicesIcon from '../../components/services-icons'
+import PartnersBanner from '../../components/partners-banner'
 
 // images
-import manVaultImg from '../assets/images/man-vault.webp'
+import manVaultImg from '../../assets/images/man-vault.webp'
 
 // styles
-import styles from './_styles/about.module.scss'
+import styles from './index.module.scss'
 
 const AboutPage = () => {
   return (

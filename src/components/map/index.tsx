@@ -23,15 +23,9 @@ const Map: React.FC<MapProps> = ({ location }) => {
   return (
     <GoogleMapReact
       bootstrapURLKeys={{ key: process.env.GATSBY_GMAP_API_KEY }}
-      defaultCenter={defaultProps.center}
+      defaultCenter={location}
       defaultZoom={defaultProps.zoom}
-    >
-      <AnyReactComponent
-        lat={location.lat}
-        lng={location.lng}
-        text={location.text}
-      />
-    </GoogleMapReact>
+    />
   )
 }
 

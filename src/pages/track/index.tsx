@@ -1,11 +1,11 @@
 import * as React from 'react'
 
-import Layout from '../layout'
-import TrackForm from '../components/track-form'
-import TrackResult from '../components/track-result'
-import PartnersBanner from '../components/partners-banner'
+import Layout from '../../layout'
+import TrackForm from '../../components/track-form'
+import TrackResult from '../../components/track-result'
+import PartnersBanner from '../../components/partners-banner'
 
-import { results } from '../data-components/fixtures'
+import { results } from '../../data-components/fixtures'
 
 const { useState } = React
 

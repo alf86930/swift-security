@@ -1,0 +1,10 @@
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--blue-lightest);
+    padding: var(--site-pdLarge);
+    height: 100vh;
+  }
+}

@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Layout from '../layout'
 import ErrorIcon from '../assets/icons/ErrorIcon'
 
-import styles from './_styles/404.module.scss'
+import styles from './404.module.scss'
 
 const ErrorPage = () => {
   return (

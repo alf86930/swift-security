@@ -55,7 +55,7 @@ const Navbar = () => {
         </li>
 
         <li className={styles.navMenuItem}>
-          <Link className={styles.navMenuLink} to="/">
+          <Link className={styles.navMenuLink} to="/contact-us">
             Contact us
           </Link>
         </li>

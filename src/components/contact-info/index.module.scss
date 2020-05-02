@@ -1,0 +1,37 @@
+.info {
+  padding: var(--site-pd);
+}
+
+.h2 {
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+.p {
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.icon {
+  width: 25px;
+  fill: var(--blue-darkest);
+  margin-right: 15px;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: var(--blue-darkest);
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 800px;
+    height: 75vh;
+  }
+}
