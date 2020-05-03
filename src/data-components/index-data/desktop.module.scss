@@ -5,9 +5,8 @@
 }
 
 .heroOneContainer {
-  background-color: var(--blue-darkest);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  background-color: transparentize($color: #021e42, $amount: 0.2);
+  border-radius: 5px;
 }
 
 .heroTwoContainer {

@@ -24,6 +24,14 @@ export const heroOneDesktopContent = (
       <li className={styles.li}>100% Swiss owned and operated</li>
       <li className={styles.li}>Complete peace of mind and confidentiality</li>
     </ul>
+
+    <Link
+      className={styles.heroLink}
+      to="/secure-vault"
+      style={{ margin: '30px auto 0 auto' }}
+    >
+      Access your secure vault
+    </Link>
   </div>
 )
 

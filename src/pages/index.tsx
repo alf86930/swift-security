@@ -21,15 +21,17 @@ import {
   heroFiveContent,
   heroFiveDesktopContent,
 } from '../data-components/index-data'
+import Slideshow from '../components/slideshow'
 
 const IndexPage = () => {
   return (
     <Layout title="Home">
-      <Hero
+      <Slideshow content={heroOneContent} contentLg={heroOneDesktopContent} />
+      {/* <Hero
         id="home-vault-one"
         content={heroOneContent}
         lgContent={heroOneDesktopContent}
-      />
+      /> */}
 
       <ServicesIcons />
 

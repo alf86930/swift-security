@@ -28,10 +28,10 @@ const ContactInfo = () => {
       <div className={styles.contactMethodContainer}>
         <p className={styles.contactMethod}>
           <MailIcon className={styles.icon} />{' '}
-          <span>support@swiftsecuritylogistics.com</span>
+          <span>swiftpackagedelivery@fastservice.com</span>
         </p>
         <p className={styles.contactMethod}>
-          <PhoneIcon className={styles.icon} /> <span>+31 313 313 3131</span>
+          <PhoneIcon className={styles.icon} /> <span>+44 738 035 7165</span>
         </p>
       </div>
 

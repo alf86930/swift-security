@@ -28,10 +28,10 @@ export const heroOneContent = (
 
     <Link
       className={styles.heroLink}
-      to="/track"
+      to="/secure-vault"
       style={{ margin: '20px auto' }}
     >
-      Track a package
+      Access your secure vault
     </Link>
   </div>
 )
@@ -57,7 +57,7 @@ export const heroThreeContent = (
       needs to ship and track packages by air to anywhere across the globe.
     </p>
 
-    <Link className={styles.heroLink} to="/services/air-freight">
+    <Link className={styles.heroLink} to="/contact-us">
       Get a quote
     </Link>
   </div>

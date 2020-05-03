@@ -1,0 +1,38 @@
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 20, 0.7);
+  background-blend-mode: darken;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 500px;
+  max-height: 90vh;
+  color: white;
+}
+
+.contentLg {
+  display: none;
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .slide {
+    background-color: rgba(0, 0, 20, 0.4);
+    height: 95vh;
+  }
+
+  .content {
+    display: none;
+  }
+
+  .contentLg {
+    display: block;
+  }
+}
