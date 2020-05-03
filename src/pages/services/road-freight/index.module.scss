@@ -1,0 +1,33 @@
+.container {
+  padding: var(--site-pd);
+}
+
+.h1 {
+  color: var(--text-color);
+}
+
+.p {
+  line-height: 1.5;
+}
+
+.truckImage {
+  width: auto;
+  height: 100px;
+  margin-left: 20px;
+  float: right;
+  transform: rotateY(180deg);
+}
+
+.contactCTA {
+  font-size: 1.2em;
+  display: block;
+  margin-top: 100px;
+  color: var(--blue-normal);
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .container {
+    padding: var(--site-pd) var(--site-pdLarge);
+  }
+}

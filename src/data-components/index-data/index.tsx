@@ -38,13 +38,13 @@ export const heroOneContent = (
 
 export const heroTwoContent = (
   <div className={styles.heroTwoContainer}>
-    <h2 className={styles.heroH2}>Shipping Services</h2>
+    <h2 className={styles.heroH2}>Freight Services</h2>
 
     <p className={styles.heroDescription}>
       Our Freight Services has demonstrated incomparable excellence to companies
       and individuals with special requirements.
       <Linebreak />
-      We are committed to providing efficient shipping and handling, pickup and
+      We are committed to providing efficient freight and handling, pickup and
       on-time delivery; all together with world-class security.
     </p>
   </div>
@@ -53,7 +53,7 @@ export const heroTwoContent = (
 export const heroThreeContent = (
   <div className={styles.heroThreeContainer}>
     <p className={styles.heroDescription}>
-      Your one-stop solution for your international air freight and shipping
+      Your one-stop solution for your international air freight and freight
       needs to ship and track packages by air to anywhere across the globe.
     </p>
 
@@ -75,7 +75,7 @@ export const heroFourContent = (
 
     <p className={styles.heroDescription}>
       We're a quality Road Freight Services logistics provider that abides to
-      your precise shipping needs with reliable.
+      your precise freight needs with reliable.
       <Linebreak />
       In order to guarantee our customers a high quality and cost effective
       service, we have a network consisting of several offices situated in every

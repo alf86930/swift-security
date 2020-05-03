@@ -29,19 +29,19 @@ export const heroOneDesktopContent = (
 
 export const heroTwoDesktopContent = (
   <div className={`${styles.heroContainer} ${styles.heroTwoContainer}`}>
-    <h2 className={styles.heroH2}>Shipping &amp; Logistics Services</h2>
+    <h2 className={styles.heroH2}>Freight &amp; Logistics Services</h2>
 
     <p className={styles.heroP}>
       Ocean Freight Services / Sea Freight Services offered by Swift Security
       &amp; Logistics has demonstrated incomparable excellence to companies and
       individuals with special requirements.
       <Linebreak />
-      We are committed to providing efficient shipping and handling, ordering,
+      We are committed to providing efficient freight and handling, ordering,
       pickup and on-time delivery; all together with constant support for our
       clientele.
     </p>
 
-    <Link className={styles.heroLink} to="/shipping">
+    <Link className={styles.heroLink} to="/freight">
       See Our Logistics Services
     </Link>
   </div>
@@ -80,7 +80,7 @@ export const heroFourDesktopContent = (
 
     <p className={styles.heroDescription}>
       If you require a quality Road Freight Services ( Road Transport )
-      logistics provider that abides to your precise shipping needs with
+      logistics provider that abides to your precise freight needs with
       reliable, time reducing and cost effective results, then the services of
       Swift Logistics are right for you.
       <Linebreak />

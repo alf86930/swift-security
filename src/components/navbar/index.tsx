@@ -15,9 +15,9 @@ import styles from './navbar.module.scss'
 
 const services = [
   { name: 'Secure Vault', url: '/services/secure-vault' },
-  { name: 'Air Shipping', url: '/services/air-shipping' },
-  { name: 'Road Delivery', url: '/services/road-delivery' },
-  { name: 'Freight Services', url: '/services/freight-services' },
+  { name: 'Air Freight', url: '/services/air-freight' },
+  { name: 'Ocean Freight', url: '/services/ocean-freight' },
+  { name: 'Road Freight', url: '/services/road-freight' },
 ]
 
 const Navbar = () => {
