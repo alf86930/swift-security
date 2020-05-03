@@ -5,7 +5,7 @@ import styles from './footer.module.scss'
 
 const links = [
   { text: 'Legal Notice', href: '/legal-notice' },
-  { text: 'Terms of Use', href: '/tos' },
+  { text: 'Terms of Use', href: '/terms-of-use' },
   { text: 'Privacy Policy', href: '/privacy-policy' },
 ]
 

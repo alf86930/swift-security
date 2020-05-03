@@ -10,14 +10,19 @@ type LayoutProps = {
   title: string
   children: React.ReactNode
 }
-export default (props: LayoutProps) => (
-  <>
-    <SEO title={props.title} />
 
-    <Navbar />
+const Layout: React.FC<LayoutProps> = ({ title, children }) => {
+  return (
+    <>
+      <SEO title={title} />
 
-    <div className="main">{props.children}</div>
+      <Navbar />
 
-    <Footer />
-  </>
-)
+      <div className="main">{children}</div>
+
+      <Footer />
+    </>
+  )
+}
+
+export default Layout

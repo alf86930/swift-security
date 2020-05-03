@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+import Linebreak from '../linebreak'
 import VaultIMG from '../../assets/images/vault.jpg'
 import styles from './vault-info.module.scss'
 
@@ -15,7 +16,7 @@ const VaultInfo = () => {
           With own warehouse package, you can store your valuable items, ranging
           from the important documents in safe deposits, to gold bullion in
           special gold deposits and other treasure deposits.
-          <br /> <br />
+          <Linebreak />
           We are specialized in Vault Security, Safe Deposits, Gold Deposits,
           Treasures, logistic solutions, customs clearance, freight forwarding,
           in-land freight, air import and export from to across the world.

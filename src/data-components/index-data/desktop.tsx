@@ -1,6 +1,9 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
+// components
+import Linebreak from '../../components/linebreak'
+
 // images
 import TruckImage from '../../assets/images/truck.jpg'
 
@@ -32,8 +35,7 @@ export const heroTwoDesktopContent = (
       Ocean Freight Services / Sea Freight Services offered by Swift Security
       &amp; Logistics has demonstrated incomparable excellence to companies and
       individuals with special requirements.
-      <br />
-      <br />
+      <Linebreak />
       We are committed to providing efficient shipping and handling, ordering,
       pickup and on-time delivery; all together with constant support for our
       clientele.
@@ -53,7 +55,7 @@ export const heroThreeDesktopContent = (
       Need a one-stop solution for your international air freight and forwarding
       needs, whereas a faster, safer and cost effective way to ship and track
       your cargo by air to anywhere across the globe?
-      <br /> <br />
+      <Linebreak />
       Look no further than Universal Freighting. Our services are cleverly
       designed and proven to provide you and your business with quality air
       freight forwarder services and shipment tailored to your precise needs, be
@@ -81,7 +83,7 @@ export const heroFourDesktopContent = (
       logistics provider that abides to your precise shipping needs with
       reliable, time reducing and cost effective results, then the services of
       Swift Logistics are right for you.
-      <br /> <br />
+      <Linebreak />
       In order to guarantee our customers a highly efficient, high quality and
       cost effective services that they desire, we have a network consisting of
       several offices situated in every major city across US including Shanghai,
@@ -98,7 +100,7 @@ export const heroFiveDesktopContent = (
   <div className={styles.heroFiveContainer}>
     <p className={styles.p}>
       Avant coordinates people in over 133 countries and territories worldwide.
-      <br /> <br />
+      <Linebreak />
       Driven by the power of more than 67,000 employees, we deliver integrated
       services and tailored solutions for managing and transporting letters,
       goods and information.

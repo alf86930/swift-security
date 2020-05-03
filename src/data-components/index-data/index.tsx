@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
+import Linebreak from '../../components/linebreak'
+
 import {
   heroOneDesktopContent,
   heroTwoDesktopContent,
@@ -41,7 +43,7 @@ export const heroTwoContent = (
     <p className={styles.heroDescription}>
       Our Freight Services has demonstrated incomparable excellence to companies
       and individuals with special requirements.
-      <br /> <br />
+      <Linebreak />
       We are committed to providing efficient shipping and handling, pickup and
       on-time delivery; all together with world-class security.
     </p>
@@ -74,7 +76,7 @@ export const heroFourContent = (
     <p className={styles.heroDescription}>
       We're a quality Road Freight Services logistics provider that abides to
       your precise shipping needs with reliable.
-      <br /> <br />
+      <Linebreak />
       In order to guarantee our customers a high quality and cost effective
       service, we have a network consisting of several offices situated in every
       major city across US including Shanghai, Guangzhou, and Qingdao.
@@ -91,7 +93,7 @@ export const heroFiveContent = (
     <p className={styles.heroDescriptionMedium}>
       Swift Security &amp; Logistics coordinates people in over 17 countries and
       territories worldwide.
-      <br /> <br />
+      <Linebreak />
       Driven by the power of more than 7,000 employees, we deliver integrated
       services and tailored solutions for managing and transporting goods and
       information.

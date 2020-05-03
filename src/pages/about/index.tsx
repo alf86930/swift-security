@@ -4,6 +4,7 @@ import * as React from 'react'
 import Layout from '../../layout'
 import ServicesIcon from '../../components/services-icons'
 import PartnersBanner from '../../components/partners-banner'
+import Linebreak from '../../components/linebreak'
 
 // images
 import manVaultImg from '../../assets/images/man-vault.jpg'
@@ -31,17 +32,17 @@ const AboutPage = () => {
           operated. We provide custodial services to private individuals and
           businesses, allowing them to safeguard their most valued possessions
           in a secure state-of-the-art purpose-built vault.
-          <br /> <br />
+          <Linebreak />
           As a member of the Safe Deposit Federation (SDF), Swift Security &amp;
           Logistics meet the highest standards in both security and privacy. We
           offer rental of safe deposit boxes in a variety of sizes and rental
           periods to meet all requirements.
-          <br /> <br />
+          <Linebreak />
           Irish Banks such as Bank of Ireland, Allied Irish Bank, Ulster Bank
           and Permanent TSB are no longer offering a ‘safe deposit box’ service
           to their customers, yet now more than ever companies and individuals
           need to secure valued possession safely.
-          <br /> <br />
+          <Linebreak />
           Our facility offers various box sizes to suit all client requirements.
           The smaller boxes are ideal for the storage of jewellery, cash,
           valuable coins and computer back-up discs. The mid-range boxes are

@@ -1,5 +1,8 @@
 import * as React from 'react'
 
+// components
+import Linebreak from '../linebreak'
+
 // icons
 import MailIcon from '../../assets/icons/MailIcon'
 import PhoneIcon from '../../assets/icons/PhoneIcon'
@@ -17,7 +20,7 @@ const ContactInfo = () => {
         point. Do you have any inquiries about our services or do you have a
         complaint? Do you want to ship a secure vault or hire our security
         services?
-        <br /> <br />
+        <Linebreak />
         You can reach us by filling the form below. If it's a high-priority
         request you can reach us via the methods below:
       </p>
