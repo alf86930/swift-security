@@ -47,6 +47,24 @@
   }
 }
 
+.historyDelayed {
+  composes: history;
+
+  p {
+    color: var(--red) !important;
+  }
+}
+
+.delayedText {
+  color: var(--red);
+  font-weight: 500;
+
+  a {
+    text-decoration: none;
+    color: var(--blue-normal);
+  }
+}
+
 // ######################### Desktop styles #############################
 @media (min-width: 768px) {
   .h2 {

@@ -47,3 +47,9 @@
     }
   }
 }
+
+.delayed {
+  &:before {
+    background-color: var(--red);
+  }
+}

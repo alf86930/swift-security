@@ -5,9 +5,10 @@ import styles from './index.module.scss'
 interface TimelineProps {
   index: number
   length: number
+  isDelayed?: boolean
 }
 
-const Timeline: React.FC<TimelineProps> = ({ index, length }) => {
+const Timeline: React.FC<TimelineProps> = ({ index, length, isDelayed }) => {
   const timelineClassname =
     index === 0
       ? styles.timelineFirst
@@ -15,7 +16,9 @@ const Timeline: React.FC<TimelineProps> = ({ index, length }) => {
       ? styles.timelineLast
       : styles.timeline
 
-  return <span className={timelineClassname} />
+  return (
+    <span className={`${timelineClassname} ${isDelayed && styles.delayed}`} />
+  )
 }
 
 export default Timeline

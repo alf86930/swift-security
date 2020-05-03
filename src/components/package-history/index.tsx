@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import moment from 'moment'
 
 import Timeline from '../timeline'
@@ -16,12 +17,29 @@ const PackageHistory: React.FC<PackageHistoryProps> = ({ item }) => {
       const itemDate = moment(historyItem.date).format('dddd, MMMM Do YYYY')
 
       return (
-        <div className={styles.history} key={historyItem.code}>
-          <Timeline index={i} length={item.history.length - 1} />
+        <div
+          className={
+            historyItem.status === 'in-transit'
+              ? styles.history
+              : styles.historyDelayed
+          }
+          key={historyItem.code}
+        >
+          <Timeline
+            index={i}
+            length={item.history.length - 1}
+            isDelayed={historyItem.status === 'delayed'}
+          />
 
           <p className={styles.historyComment}>{historyItem.comment}</p>
           <p className={styles.historyLocation}>{historyItem.location}</p>
           <p className={styles.historyDate}>{itemDate}</p>
+
+          {historyItem.status === 'delayed' && (
+            <small className={styles.delayedText}>
+              Please <Link to="/contact-us">contact us</Link> for more info
+            </small>
+          )}
         </div>
       )
     })

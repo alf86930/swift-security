@@ -1,4 +1,6 @@
-const fakeResultOne = {
+import { Result } from '../../components/track-result/interfaces'
+
+const fakeResultOne: Result = {
   item: {
     price: 5000000.0,
     sendDate: new Date(),
@@ -11,6 +13,14 @@ const fakeResultOne = {
     },
   },
   history: [
+    {
+      location: 'New York, United States',
+      code: 'NYU',
+      date: new Date(),
+      comment: 'Delivery delayed',
+      status: 'delayed',
+      leg: 'pre transit',
+    },
     {
       location: 'Paris, France',
       code: 'PAR',

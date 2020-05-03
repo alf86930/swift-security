@@ -13,7 +13,7 @@ const Track = () => {
   const [item, setItem] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleSubmit = (code: string) => event => {
+  const handleSubmit = (code: string) => {
     event.preventDefault()
 
     setIsLoading(true)

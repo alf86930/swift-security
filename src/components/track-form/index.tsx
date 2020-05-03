@@ -7,11 +7,18 @@ import styles from './index.module.scss'
 const { useState } = React
 
 interface VaultFormProps {
-  handleSubmit: (code: string) => (event: any) => void
+  handleSubmit: (code: string) => void
 }
 
 const VaultForm: React.FC<VaultFormProps> = ({ handleSubmit }) => {
-  const [trackingCode, setTrackingCode] = useState('ASDFGHKL')
+  const [trackingCode, setTrackingCode] = useState('')
+
+  const onSubmit = e => {
+    e.preventDefault()
+
+    handleSubmit(trackingCode)
+    setTrackingCode('')
+  }
 
   return (
     <section className={styles.container}>
@@ -21,10 +28,7 @@ const VaultForm: React.FC<VaultFormProps> = ({ handleSubmit }) => {
           Simply fill in the 8 digit tracking code and track your item.
         </p>
 
-        <form
-          className={styles.inputContainer}
-          onSubmit={handleSubmit(trackingCode)}
-        >
+        <form className={styles.inputContainer} onSubmit={onSubmit}>
           <label className={styles.label} htmlFor="tracking-code">
             Tracking code
           </label>
