@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import postageImage from '../../assets/images/track-man-one.webp'
+import postageImage from '../../assets/images/track-man-one.jpg'
 
 import styles from './index.module.scss'
 

@@ -6,7 +6,7 @@ import ServicesIcon from '../../components/services-icons'
 import PartnersBanner from '../../components/partners-banner'
 
 // images
-import manVaultImg from '../../assets/images/man-vault.webp'
+import manVaultImg from '../../assets/images/man-vault.jpg'
 
 // styles
 import styles from './index.module.scss'

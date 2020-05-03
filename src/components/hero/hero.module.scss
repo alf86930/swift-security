@@ -6,26 +6,27 @@
   overflow: hidden;
   background-color: var(--white);
   background-blend-mode: darken;
+  background-repeat: no-repeat;
   background-size: cover;
 
   &HomeVaultOne {
     min-height: 70vh;
     background-color: rgba(0, 0, 0, 0.7);
-    background-image: url('../../assets/images/hero-images/home-vault-one.webp');
+    background-image: url('../../assets/images/hero-images/home-vault-one.jpg');
     background-position-x: 60%;
   }
   &HomePlaneOne {
     background-color: rgba(0, 0, 0, 0.7);
-    background-image: url('../../assets/images/hero-images/home-plane-one.webp');
+    background-image: url('../../assets/images/hero-images/home-plane-one.jpg');
   }
   &HomeShipOne {
     background-color: rgba(0, 0, 0, 0.7);
-    background-image: url('../../assets/images/hero-images/home-ship-one.webp');
+    background-image: url('../../assets/images/hero-images/home-ship-one.jpg');
     background-position-x: center;
   }
   &HomeWomanOne {
     background-color: rgba(0, 0, 0, 0.7);
-    background-image: url('../../assets/images/hero-images/home-woman-one.webp');
+    background-image: url('../../assets/images/hero-images/home-woman-one.jpg');
     background-position-x: 60%;
   }
 }
@@ -55,7 +56,7 @@
     }
     &HomeShipOne {
       min-height: 80vh;
-      background-image: url('../../assets/images/hero-images/home-ship-two.webp');
+      background-image: url('../../assets/images/hero-images/home-ship-two.jpg');
       background-position-y: 45%;
     }
     &HomePlaneOne {

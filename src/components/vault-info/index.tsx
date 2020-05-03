@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import VaultIMG from '../../assets/images/vault.webp'
+import VaultIMG from '../../assets/images/vault.jpg'
 import styles from './vault-info.module.scss'
 
 const VaultInfo = () => {

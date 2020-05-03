@@ -1,12 +1,11 @@
 import * as React from 'react'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 
 // images
-import TruckImage from '../../assets/images/truck.webp'
+import TruckImage from '../../assets/images/truck.jpg'
 
 // styles
 import styles from './desktop.module.scss'
-import { Link } from 'gatsby'
 
 export const heroOneDesktopContent = (
   <div className={`${styles.heroContainer} ${styles.heroOneContainer}`}>

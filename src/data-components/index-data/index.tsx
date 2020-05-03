@@ -10,7 +10,7 @@ import {
 } from './desktop'
 
 // images
-import TruckImage from '../../assets/images/truck.webp'
+import TruckImage from '../../assets/images/truck.jpg'
 
 // styles
 import styles from './index.module.scss'
