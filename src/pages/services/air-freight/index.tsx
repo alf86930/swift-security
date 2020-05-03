@@ -6,7 +6,7 @@ import Layout from '../../../layout'
 import Linebreak from '../../../components/linebreak'
 
 // images
-import planeImg from '../../../assets/images/plane.png'
+import planeImg from '../../../assets/images/plane.jpg'
 
 // styles
 import styles from './index.module.scss'
