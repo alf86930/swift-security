@@ -9,7 +9,7 @@ import styles from './services-icons.module.scss'
 
 const services = [
   { label: 'Track a package', href: '/track', icon: <TruckIcon /> },
-  { label: 'Secure vault', href: '/vault', icon: <VaultIcon /> },
+  { label: 'Secure vault', href: '/secure-vault', icon: <VaultIcon /> },
   { label: 'Contact us', href: '/contact-us', icon: <ServiceIcon /> },
 ]
 

@@ -1,16 +1,16 @@
 import * as React from 'react'
 
 import Layout from '../../layout'
-import TrackForm from '../../components/track-form'
-import TrackResult from '../../components/track-result'
+import VaultForm from '../../components/vault-form'
+import VaultContent from '../../components/vault-content'
 import PartnersBanner from '../../components/partners-banner'
 
-import { results } from '../../data-components/fixtures'
+import { vaults } from '../../data-components/fixtures'
 
 const { useState } = React
 
-const TrackPage = () => {
-  const [item, setItem] = useState(null)
+const SecureVaultPage = () => {
+  const [vault, setVault] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = (code: string) => {
@@ -19,28 +19,27 @@ const TrackPage = () => {
     setIsLoading(true)
 
     setTimeout(() => {
-      const result = results[code]
+      const result = vaults[code]
 
       if (!result) {
-        setItem('not found')
+        setVault('not found')
         setIsLoading(false)
         return
       }
 
-      setItem(result)
+      setVault(result)
       setIsLoading(false)
     }, 900)
   }
 
   return (
     <Layout title="Track your package">
-      <TrackForm handleSubmit={handleSubmit} />
-
-      <TrackResult result={item} isLoading={isLoading} />
+      <VaultForm handleSubmit={handleSubmit} />
+      <VaultContent vault={vault} isLoading={isLoading} />
 
       <PartnersBanner />
     </Layout>
   )
 }
 
-export default TrackPage
+export default SecureVaultPage

@@ -1,4 +1,12 @@
+import { VaultData } from '../../components/vault-content'
 import { Result } from '../../components/track-result/interfaces'
+
+const vaultData: VaultData = {
+  owner: 'John Doe',
+  date: new Date(),
+  description: 'Secure Briefcase',
+  worth: 5000000,
+}
 
 const fakeResultOne: Result = {
   item: {
@@ -53,4 +61,8 @@ const fakeResultOne: Result = {
 
 export const results = {
   ASDFGHKL: fakeResultOne,
+}
+
+export const vaults = {
+  'SGD/XXX/893/17': vaultData,
 }

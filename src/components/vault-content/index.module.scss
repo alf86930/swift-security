@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px;
+  padding: var(--site-pd);
+  background-color: var(--blue-lightest);
+}
+
+.h2 {
+  display: none;
+}
+
+.p {
+  font-weight: 500;
+  color: var(--blue-darkest);
+  // padding: 0 var(--site-pd);
+}
+
+// ######################### Desktop styles #############################
+@media (min-width: 768px) {
+  .container {
+    padding: var(--site-pdLarge);
+    background-color: var(--blue-lightest);
+  }
+
+  .h2 {
+    display: block;
+    color: var(--blue-darkest);
+    margin-bottom: calc(var(--site-pd) * 2);
+  }
+
+  .p {
+    padding-right: 0;
+  }
+
+  .price {
+    color: var(--blue-darkest);
+    background-color: transparent;
+  }
+}
