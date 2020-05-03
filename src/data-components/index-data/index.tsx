@@ -57,7 +57,7 @@ export const heroThreeContent = (
       needs to ship and track packages by air to anywhere across the globe.
     </p>
 
-    <Link className={styles.heroLink} to="/air-freight">
+    <Link className={styles.heroLink} to="/services/air-freight">
       Get a quote
     </Link>
   </div>
@@ -82,7 +82,7 @@ export const heroFourContent = (
       major city across US including Shanghai, Guangzhou, and Qingdao.
     </p>
 
-    <Link className={styles.heroLinkAlt} to="/road-freight">
+    <Link className={styles.heroLinkAlt} to="/services/road-freight">
       Ship something by road
     </Link>
   </div>

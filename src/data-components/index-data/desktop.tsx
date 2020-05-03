@@ -41,8 +41,8 @@ export const heroTwoDesktopContent = (
       clientele.
     </p>
 
-    <Link className={styles.heroLink} to="/freight">
-      See Our Logistics Services
+    <Link className={styles.heroLink} to="/services/ocean-freight">
+      See Our Ocean Freight Services
     </Link>
   </div>
 )
@@ -90,7 +90,7 @@ export const heroFourDesktopContent = (
       Guangzhou, Qingdao, Hong Kong, Ningbo and Tianjin.
     </p>
 
-    <Link className={styles.heroLinkAlt} to="/road-freight">
+    <Link className={styles.heroLinkAlt} to="/services/road-freight">
       Ship something by road
     </Link>
   </div>
