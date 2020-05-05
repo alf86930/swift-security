@@ -10,11 +10,11 @@ import { Result } from '../../components/track-result/interfaces'
 
 const { useState } = React
 
-const TrackPage = ({ data }) => {
-  const [item, setItem] = useState(null)
+const TrackPage = ({ data: { allContentfulPackage } }) => {
+  const [item, setItem] = useState<Result | null | 'not found'>(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  const packages = data.allContentfulTrackingPackagePackageJsonNode.nodes
+  const packages = allContentfulPackage.nodes
 
   const handleSubmit = (code: string) => {
     event.preventDefault()
@@ -22,7 +22,7 @@ const TrackPage = ({ data }) => {
     setIsLoading(true)
 
     setTimeout(() => {
-      const result: Result = packages.filter(p => p.item.code === code)[0]
+      const result = packages.filter(p => p.package.item.code === code)[0]
 
       if (!result) {
         setItem('not found')
@@ -30,7 +30,7 @@ const TrackPage = ({ data }) => {
         return
       }
 
-      setItem(result)
+      setItem(result.package)
       setIsLoading(false)
     }, 900)
   }
@@ -47,30 +47,32 @@ const TrackPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query FetchAllPackages {
-    allContentfulTrackingPackagePackageJsonNode {
+  query FetchPackages {
+    allContentfulPackage {
       nodes {
-        item {
-          code
-          currentLocation {
-            lat
-            lng
-            text
+        package {
+          item {
+            code
+            price
+            sendDate
+            eta
+            currentLocation {
+              lat
+              lng
+              text
+            }
           }
-          eta
-          sendDate
-          price
-        }
-        sender {
-          name
-        }
-        history {
-          code
-          date
-          comment
-          leg
-          location
-          status
+          sender {
+            name
+          }
+          history {
+            code
+            comment
+            date
+            leg
+            location
+            status
+          }
         }
       }
     }

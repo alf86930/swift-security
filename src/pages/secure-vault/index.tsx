@@ -8,13 +8,11 @@ import PartnersBanner from '../../components/partners-banner'
 
 const { useState } = React
 
-const SecureVaultPage = ({ data }) => {
-  const [vault, setVault] = useState(null)
+const SecureVaultPage = ({ data: { allContentfulVault } }) => {
+  const [vault, setVault] = useState<VaultData | null | 'not found'>(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  const vaults: VaultData[] = data.allContentfulVaultVaultJsonNode.nodes
-
-  console.log(vaults)
+  const vaults = allContentfulVault.nodes
 
   const handleSubmit = (code: string) => {
     event.preventDefault()
@@ -22,21 +20,21 @@ const SecureVaultPage = ({ data }) => {
     setIsLoading(true)
 
     setTimeout(() => {
-      const result = vaults.filter(v => v.code === code)[0]
+      const data = vaults.filter(v => v.vault.code === code)[0]
 
-      if (!result) {
+      if (!data) {
         setVault('not found')
         setIsLoading(false)
         return
       }
 
-      setVault(result)
+      setVault(data.vault)
       setIsLoading(false)
     }, 900)
   }
 
   return (
-    <Layout title="Track your package">
+    <Layout title="Access Your Secure Vault">
       <VaultForm handleSubmit={handleSubmit} />
       <VaultContent vault={vault} isLoading={isLoading} />
 
@@ -47,13 +45,15 @@ const SecureVaultPage = ({ data }) => {
 
 export const query = graphql`
   query FetchVaults {
-    allContentfulVaultVaultJsonNode {
+    allContentfulVault {
       nodes {
-        code
-        owner
-        date
-        description
-        worth
+        vault {
+          code
+          date
+          description
+          owner
+          worth
+        }
       }
     }
   }
