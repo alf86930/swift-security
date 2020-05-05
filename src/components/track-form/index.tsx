@@ -19,14 +19,14 @@ const VaultForm: React.FC<VaultFormProps> = ({
 
   useEffect(() => {
     if (defaultCode) {
-      handleSubmit(trackingCode)
+      handleSubmit(trackingCode.toUpperCase())
     }
   }, [defaultCode])
 
   const onSubmit = e => {
     e.preventDefault()
 
-    handleSubmit(trackingCode)
+    handleSubmit(trackingCode.toUpperCase())
     setTrackingCode('')
   }
 

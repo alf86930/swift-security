@@ -35,10 +35,14 @@ const TrackPage = ({ data: { allContentfulPackage }, location }) => {
     }, 900)
   }
 
+  const defaultTrackingCode = location.state.trackingCode
+    ? location.state.trackingCode
+    : ''
+
   return (
     <Layout title="Track your package">
       <TrackForm
-        defaultCode={location.state.trackingCode}
+        defaultCode={defaultTrackingCode}
         handleSubmit={handleSubmit}
       />
 

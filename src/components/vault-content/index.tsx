@@ -36,10 +36,10 @@ const VaultContent: React.FC<VaultContentProps> = ({ isLoading, vault }) => {
       <h2 className={styles.h2}>Vault Content</h2>
 
       <p className={styles.p}>Vault Content: {vault.description}</p>
-      <p className={styles.p}>Total worth: {vaultWorth}</p>
-
       <p className={styles.p}>Owned by: {vault.owner}</p>
       <p className={styles.p}>Deposited on: {vaultDate}</p>
+
+      <p className={styles.p}>Total worth: {vaultWorth}</p>
     </div>
   )
 }

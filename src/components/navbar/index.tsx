@@ -70,6 +70,12 @@ const Navbar = () => {
         </li>
 
         <li className={styles.navMenuItem}>
+          <Link className={styles.navMenuLink} to="/secure-vault">
+            Access your vault
+          </Link>
+        </li>
+
+        <li className={styles.navMenuItem}>
           <SearchIcon className={styles.searchIcon} />
 
           <form onSubmit={handleTrackingInputSubmit}>
