@@ -44,7 +44,7 @@ const SecureVaultPage = ({ data: { allContentfulVault } }) => {
 }
 
 export const query = graphql`
-  query FetchVaults {
+  query {
     allContentfulVault {
       nodes {
         vault {

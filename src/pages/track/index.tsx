@@ -47,7 +47,7 @@ const TrackPage = ({ data: { allContentfulPackage } }) => {
 }
 
 export const query = graphql`
-  query FetchPackages {
+  query {
     allContentfulPackage {
       nodes {
         package {
