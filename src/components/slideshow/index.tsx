@@ -5,10 +5,23 @@ import homeSlideOne from '../../assets/images/slider-images/home-slide-one.jpg'
 import homeSlideTwo from '../../assets/images/slider-images/home-slide-two.jpg'
 import homeSlideThree from '../../assets/images/slider-images/home-slide-three.jpg'
 import homeSlideFour from '../../assets/images/slider-images/home-slide-four.jpg'
+import homeSlideFive from '../../assets/images/slider-images/home-slide-five.jpg'
+import homeSlideSix from '../../assets/images/slider-images/home-slide-six.jpg'
+import homeSlideSeven from '../../assets/images/slider-images/home-slide-seven.jpg'
+import homeSlideEight from '../../assets/images/slider-images/home-slide-eight.jpg'
 
 import styles from './index.module.scss'
 
-const images = [homeSlideOne, homeSlideTwo, homeSlideThree, homeSlideFour]
+const images = [
+  homeSlideOne,
+  homeSlideTwo,
+  homeSlideThree,
+  homeSlideFour,
+  homeSlideFive,
+  homeSlideSix,
+  homeSlideSeven,
+  homeSlideEight,
+]
 
 const properties = {
   duration: 4000,
