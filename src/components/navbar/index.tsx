@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 
 // components
 import Hamburger from '../hamburger'
@@ -20,11 +20,20 @@ const services = [
   { name: 'Road Freight', url: '/services/road-freight' },
 ]
 
+const { useState } = React
+
 const Navbar = () => {
-  const [isMenuOpen, toggleMenu] = React.useState(false)
+  const [isMenuOpen, toggleMenu] = useState(false)
+  const [trackingInput, setTrackingInput] = useState('')
 
   const handleMenuToggle = () => {
     toggleMenu(!isMenuOpen)
+  }
+
+  const handleTrackingInputSubmit = e => {
+    e.preventDefault()
+
+    navigate('/track', { state: { trackingCode: trackingInput } })
   }
 
   return (
@@ -63,11 +72,15 @@ const Navbar = () => {
         <li className={styles.navMenuItem}>
           <SearchIcon className={styles.searchIcon} />
 
-          <input
-            className={styles.trackInput}
-            type="text"
-            placeholder="Tracking code"
-          />
+          <form onSubmit={handleTrackingInputSubmit}>
+            <input
+              className={styles.trackInput}
+              type="text"
+              placeholder="Tracking code"
+              value={trackingInput}
+              onChange={e => setTrackingInput(e.target.value)}
+            />
+          </form>
         </li>
       </ul>
     </nav>

@@ -4,14 +4,24 @@ import postageImage from '../../assets/images/track-man-one.jpg'
 
 import styles from './index.module.scss'
 
-const { useState } = React
+const { useState, useEffect } = React
 
 interface VaultFormProps {
+  defaultCode: string
   handleSubmit: (code: string) => void
 }
 
-const VaultForm: React.FC<VaultFormProps> = ({ handleSubmit }) => {
-  const [trackingCode, setTrackingCode] = useState('')
+const VaultForm: React.FC<VaultFormProps> = ({
+  defaultCode = '',
+  handleSubmit,
+}) => {
+  const [trackingCode, setTrackingCode] = useState(defaultCode)
+
+  useEffect(() => {
+    if (defaultCode) {
+      handleSubmit(trackingCode)
+    }
+  }, [defaultCode])
 
   const onSubmit = e => {
     e.preventDefault()

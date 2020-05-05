@@ -10,7 +10,7 @@ import { Result } from '../../components/track-result/interfaces'
 
 const { useState } = React
 
-const TrackPage = ({ data: { allContentfulPackage } }) => {
+const TrackPage = ({ data: { allContentfulPackage }, location }) => {
   const [item, setItem] = useState<Result | null | 'not found'>(null)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -37,7 +37,10 @@ const TrackPage = ({ data: { allContentfulPackage } }) => {
 
   return (
     <Layout title="Track your package">
-      <TrackForm handleSubmit={handleSubmit} />
+      <TrackForm
+        defaultCode={location.state.trackingCode}
+        handleSubmit={handleSubmit}
+      />
 
       <TrackResult result={item} isLoading={isLoading} />
 
