@@ -18,6 +18,15 @@
   color: var(--blue-darkest);
 }
 
+.worth {
+  composes: p;
+
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  font-weight: 600;
+}
+
 // ######################### Desktop styles #############################
 @media (min-width: 768px) {
   .container {
