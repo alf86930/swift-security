@@ -5,10 +5,14 @@ import styles from './index.module.scss'
 const { useState } = React
 
 interface VaultFormProps {
+  forwardedRef?: React.MutableRefObject<HTMLElement>
   handleSubmit: (code: string) => void
 }
 
-const VaultForm: React.FC<VaultFormProps> = ({ handleSubmit }) => {
+const VaultForm: React.FC<VaultFormProps> = ({
+  forwardedRef,
+  handleSubmit,
+}) => {
   const [vaultNumber, setVaultNumber] = useState('SGD/XXX/893/17')
 
   const onSubmit = e => {
@@ -19,7 +23,7 @@ const VaultForm: React.FC<VaultFormProps> = ({ handleSubmit }) => {
   }
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} ref={forwardedRef}>
       <div className={styles.info}>
         <p className={styles.introText}>
           Enter your secure vault number to access the contents of your vault
@@ -47,4 +51,8 @@ const VaultForm: React.FC<VaultFormProps> = ({ handleSubmit }) => {
   )
 }
 
-export default VaultForm
+const RefVaultForm = React.forwardRef((props: VaultFormProps, ref: any) => (
+  <VaultForm forwardedRef={ref} {...props} />
+))
+
+export default RefVaultForm

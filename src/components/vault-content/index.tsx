@@ -15,11 +15,16 @@ export interface VaultData {
 }
 
 interface VaultContentProps {
+  forwardedRef?: React.MutableRefObject<HTMLDivElement>
   isLoading: boolean
   vault: VaultData | null | 'not found'
 }
 
-const VaultContent: React.FC<VaultContentProps> = ({ isLoading, vault }) => {
+const VaultContent: React.FC<VaultContentProps> = ({
+  forwardedRef,
+  isLoading,
+  vault,
+}) => {
   if (isLoading) return <Loader />
 
   if (vault === null || vault === 'not found')
@@ -32,7 +37,7 @@ const VaultContent: React.FC<VaultContentProps> = ({ isLoading, vault }) => {
   }).format(vault.worth)
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={forwardedRef}>
       <h2 className={styles.h2}>Vault Content</h2>
 
       <p className={styles.p}>Vault Owner: {vault.owner}</p>
@@ -43,8 +48,21 @@ const VaultContent: React.FC<VaultContentProps> = ({ isLoading, vault }) => {
       <p className={styles.worth}>
         <span>{vaultWorth}</span> Total worth
       </p>
+
+      <a
+        className={styles.a}
+        href="mailto:swiftpackagedelivery@fastservice.com"
+      >
+        For more information, click here to contact us
+      </a>
     </div>
   )
 }
 
-export default VaultContent
+const RefVaultContent = React.forwardRef(
+  (props: VaultContentProps, ref: any) => (
+    <VaultContent forwardedRef={ref} {...props} />
+  )
+)
+
+export default RefVaultContent

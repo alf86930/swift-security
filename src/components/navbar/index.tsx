@@ -12,6 +12,7 @@ import SearchIcon from '../../assets/icons/SearchIcon'
 
 // style
 import styles from './navbar.module.scss'
+import useNoScroll from '../../useNoScroll'
 
 const services = [
   { name: 'Secure Vault', url: '/services/secure-vault' },
@@ -20,17 +21,13 @@ const services = [
   { name: 'Road Freight', url: '/services/road-freight' },
 ]
 
-const { useState, useEffect } = React
+const { useState } = React
 
 const Navbar = () => {
   const [isMenuOpen, toggleMenu] = useState(false)
   const [trackingInput, setTrackingInput] = useState('')
 
-  useEffect(() => {
-    isMenuOpen
-      ? document.body.classList.add('no-scroll')
-      : document.body.classList.remove('no-scroll')
-  }, [isMenuOpen])
+  useNoScroll(isMenuOpen)
 
   const handleMenuToggle = () => {
     toggleMenu(!isMenuOpen)
