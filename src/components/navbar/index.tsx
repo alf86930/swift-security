@@ -20,11 +20,17 @@ const services = [
   { name: 'Road Freight', url: '/services/road-freight' },
 ]
 
-const { useState } = React
+const { useState, useEffect } = React
 
 const Navbar = () => {
   const [isMenuOpen, toggleMenu] = useState(false)
   const [trackingInput, setTrackingInput] = useState('')
+
+  useEffect(() => {
+    isMenuOpen
+      ? document.body.classList.add('no-scroll')
+      : document.body.classList.remove('no-scroll')
+  }, [isMenuOpen])
 
   const handleMenuToggle = () => {
     toggleMenu(!isMenuOpen)

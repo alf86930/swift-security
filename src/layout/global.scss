@@ -40,6 +40,10 @@ body {
   background-color: var(--white);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .react-slideshow-fade-wrapper {
   background-color: var(--blue-darkest);
 }

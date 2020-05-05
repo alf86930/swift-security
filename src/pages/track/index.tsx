@@ -35,9 +35,8 @@ const TrackPage = ({ data: { allContentfulPackage }, location }) => {
     }, 900)
   }
 
-  const defaultTrackingCode = location.state.trackingCode
-    ? location.state.trackingCode
-    : ''
+  const defaultTrackingCode =
+    location && location.state ? location.state.trackingCode : ''
 
   return (
     <Layout title="Track your package">
