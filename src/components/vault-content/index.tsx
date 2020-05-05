@@ -7,6 +7,7 @@ import VaultEmpty from '../vault-empty'
 import styles from './index.module.scss'
 
 export interface VaultData {
+  code: string
   owner: string
   date: Date
   description: string
@@ -24,7 +25,7 @@ const VaultContent: React.FC<VaultContentProps> = ({ isLoading, vault }) => {
   if (vault === null || vault === 'not found')
     return <VaultEmpty type={vault} />
 
-  const vaultDate = moment(vault.date).format('LL')
+  const vaultDate = moment(new Date(vault.date)).format('LL')
   const vaultWorth = new Intl.NumberFormat('en-GB', {
     style: 'currency',
     currency: 'EUR',

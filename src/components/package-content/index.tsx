@@ -4,8 +4,8 @@ import moment from 'moment'
 import styles from './index.module.scss'
 
 const PackageContent = ({ item }) => {
-  const itemSendDate = moment(item.sendDate).format('LL')
-  const itemETA = moment(item.eta).format('LL')
+  const itemSendDate = moment(new Date(item.sendDate)).format('LL')
+  const itemETA = moment(new Date(item.eta)).format('LL')
   const itemPrice = new Intl.NumberFormat('en-GB', {
     style: 'currency',
     currency: 'EUR',

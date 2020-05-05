@@ -27,5 +27,13 @@ module.exports = {
     // resistant to bad networks. Works with almost any
     // site!
     `gatsby-plugin-offline`,
+
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.GATBSY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
 }

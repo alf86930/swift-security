@@ -14,7 +14,9 @@ interface PackageHistoryProps {
 const PackageHistory: React.FC<PackageHistoryProps> = ({ item }) => {
   const renderPackageHistory = () =>
     item.history.map((historyItem, i) => {
-      const itemDate = moment(historyItem.date).format('dddd, MMMM Do YYYY')
+      const itemDate = moment(new Date(historyItem.date)).format(
+        'dddd, MMMM Do YYYY'
+      )
 
       return (
         <div

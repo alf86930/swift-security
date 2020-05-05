@@ -1,17 +1,20 @@
 import * as React from 'react'
+import { graphql } from 'gatsby'
 
 import Layout from '../../layout'
 import VaultForm from '../../components/vault-form'
-import VaultContent from '../../components/vault-content'
+import VaultContent, { VaultData } from '../../components/vault-content'
 import PartnersBanner from '../../components/partners-banner'
-
-import { vaults } from '../../data-components/fixtures'
 
 const { useState } = React
 
-const SecureVaultPage = () => {
+const SecureVaultPage = ({ data }) => {
   const [vault, setVault] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
+
+  const vaults: VaultData[] = data.allContentfulVaultVaultJsonNode.nodes
+
+  console.log(vaults)
 
   const handleSubmit = (code: string) => {
     event.preventDefault()
@@ -19,7 +22,7 @@ const SecureVaultPage = () => {
     setIsLoading(true)
 
     setTimeout(() => {
-      const result = vaults[code]
+      const result = vaults.filter(v => v.code === code)[0]
 
       if (!result) {
         setVault('not found')
@@ -41,5 +44,19 @@ const SecureVaultPage = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query FetchVaults {
+    allContentfulVaultVaultJsonNode {
+      nodes {
+        code
+        owner
+        date
+        description
+        worth
+      }
+    }
+  }
+`
 
 export default SecureVaultPage

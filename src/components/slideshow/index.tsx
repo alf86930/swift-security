@@ -27,8 +27,8 @@ interface SlideshowProps {
 
 const Slideshow: React.FC<SlideshowProps> = ({ content, contentLg }) => {
   const renderSlides = () =>
-    images.map(img => (
-      <div className={styles.slideContainer}>
+    images.map((img, i) => (
+      <div className={styles.slideContainer} key={i}>
         <div
           className={styles.slide}
           style={{ backgroundImage: `url(${img})` }}
