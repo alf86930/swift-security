@@ -22,16 +22,12 @@ import {
   heroFiveDesktopContent,
 } from '../data-components/index-data'
 import Slideshow from '../components/slideshow'
+import Testimonials from '../components/testimonials'
 
 const IndexPage = () => {
   return (
     <Layout title="Home">
       <Slideshow content={heroOneContent} contentLg={heroOneDesktopContent} />
-      {/* <Hero
-        id="home-vault-one"
-        content={heroOneContent}
-        lgContent={heroOneDesktopContent}
-      /> */}
 
       <ServicesIcons />
 
@@ -56,6 +52,8 @@ const IndexPage = () => {
         content={heroFourContent}
         lgContent={heroFourDesktopContent}
       />
+
+      <Testimonials />
 
       <Hero
         id="home-woman-one"
