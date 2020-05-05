@@ -1,14 +1,15 @@
 import React from 'react'
 import { Fade } from 'react-slideshow-image'
 
-import homeSlideOne from '../../assets/images/slider-images/home-slide-one.jpg'
-import homeSlideTwo from '../../assets/images/slider-images/home-slide-two.jpg'
-import homeSlideThree from '../../assets/images/slider-images/home-slide-three.jpg'
-import homeSlideFour from '../../assets/images/slider-images/home-slide-four.jpg'
-import homeSlideFive from '../../assets/images/slider-images/home-slide-five.jpg'
-import homeSlideSix from '../../assets/images/slider-images/home-slide-six.jpg'
-import homeSlideSeven from '../../assets/images/slider-images/home-slide-seven.jpg'
-import homeSlideEight from '../../assets/images/slider-images/home-slide-eight.jpg'
+import homeSlideOne from '../../assets/images/slider-images/home-slide-1.jpg'
+import homeSlideTwo from '../../assets/images/slider-images/home-slide-2.jpg'
+import homeSlideThree from '../../assets/images/slider-images/home-slide-3.jpg'
+import homeSlideFour from '../../assets/images/slider-images/home-slide-4.jpg'
+import homeSlideFive from '../../assets/images/slider-images/home-slide-5.jpg'
+import homeSlideSix from '../../assets/images/slider-images/home-slide-6.jpg'
+import homeSlideSeven from '../../assets/images/slider-images/home-slide-7.jpg'
+import homeSlideEight from '../../assets/images/slider-images/home-slide-8.jpg'
+import homeSlideNine from '../../assets/images/slider-images/home-slide-9.jpg'
 
 import styles from './index.module.scss'
 
@@ -21,6 +22,7 @@ const images = [
   homeSlideSix,
   homeSlideSeven,
   homeSlideEight,
+  homeSlideNine,
 ]
 
 const properties = {
