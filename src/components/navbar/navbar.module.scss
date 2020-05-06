@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  padding-right: 0 var(--site-pd);
+  padding-right: 10px;
   font-weight: 500;
   background-color: var(--blue-darkest);
   color: var(--white);
@@ -112,6 +112,10 @@
 
 // ######################### Desktop styles #############################
 @media (min-width: 768px) {
+  .nav {
+    padding-right: 0;
+  }
+
   .navMenu {
     display: inline-flex;
     flex-direction: row;

@@ -10,6 +10,7 @@ import homeSlideSix from '../../assets/images/slider-images/home-slide-6.jpg'
 import homeSlideSeven from '../../assets/images/slider-images/home-slide-7.jpg'
 import homeSlideEight from '../../assets/images/slider-images/home-slide-8.jpg'
 import homeSlideNine from '../../assets/images/slider-images/home-slide-9.jpg'
+import homeSlideTen from '../../assets/images/slider-images/home-slide-10.jpg'
 
 import styles from './index.module.scss'
 
@@ -23,6 +24,7 @@ const images = [
   homeSlideSeven,
   homeSlideEight,
   homeSlideNine,
+  homeSlideTen,
 ]
 
 const properties = {

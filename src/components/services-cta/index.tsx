@@ -14,8 +14,8 @@ const ServiceCTA = () => {
           chain.
         </p>
 
-        <Link className={styles.link} to="/security">
-          View our security packages
+        <Link className={styles.link} to="/secure-vault">
+          Access your vault
         </Link>
       </div>
 
@@ -30,8 +30,8 @@ const ServiceCTA = () => {
           customers.
         </p>
 
-        <Link className={styles.link} to="/logistics">
-          View our freight services
+        <Link className={styles.link} to="/services/air-freight">
+          View our air freight services
         </Link>
       </div>
     </section>
