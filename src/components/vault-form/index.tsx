@@ -13,7 +13,7 @@ const VaultForm: React.FC<VaultFormProps> = ({
   forwardedRef,
   handleSubmit,
 }) => {
-  const [vaultNumber, setVaultNumber] = useState('SGD/XXX/893/17')
+  const [vaultNumber, setVaultNumber] = useState('')
 
   const onSubmit = e => {
     e.preventDefault()
