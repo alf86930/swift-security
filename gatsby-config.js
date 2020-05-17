@@ -35,5 +35,11 @@ module.exports = {
         accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-tawk`,
+      options: {
+        tawkId: process.env.GATSBY_TAWK_ID,
+      },
+    },
   ],
 }
