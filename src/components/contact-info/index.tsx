@@ -36,6 +36,10 @@ const ContactInfo = () => {
       </div>
 
       <p className={styles.p}>We&apos;re available 24/7.</p>
+
+      <h3 className={styles.chatCta}>
+        Please use the live chat feature to get in touch with us.
+      </h3>
     </div>
   )
 }
