@@ -54,8 +54,24 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-
-    setFormData({ name: '', email: '', message: '' })
+    
+    fetch(process.env.GATSBY_TAWK_EMAIL,{
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    })
+    .then(res => res.json())
+    .then(res => {
+      if (res.status === 'success'){
+        alert("Message Sent."); 
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        alert("Message failed to send.")
+      }
+    })
   }
 
   return (
