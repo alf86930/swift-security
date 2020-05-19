@@ -13,7 +13,7 @@ const ContactUsPage = () => {
     <Layout title="Contact us">
       <div className={styles.container}>
         <ContactInfo />
-        <ContactForm />
+        {/** <ContactForm /> **/}
       </div>
     </Layout>
   )
