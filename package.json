@@ -42,7 +42,7 @@
     "gatsby-transformer-remark": "^2.7.3",
     "gatsby-transformer-sharp": "^2.4.6",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "svg-loaders-react": "^2.2.1"
   },
   "browserslist": [
